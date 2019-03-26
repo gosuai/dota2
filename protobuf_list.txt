@@ -18,3 +18,5 @@ https://github.com/SteamDatabase/GameTracking-Dota2/raw/master/Protobufs/dota_sh
 https://github.com/SteamDatabase/GameTracking-Dota2/raw/master/Protobufs/econ_gcmessages.proto
 https://github.com/SteamDatabase/GameTracking-Dota2/raw/master/Protobufs/econ_shared_enums.proto
 https://github.com/SteamDatabase/GameTracking-Dota2/raw/master/Protobufs/dota_match_metadata.proto
+https://github.com/SteamDatabase/GameTracking-Dota2/raw/master/Protobufs/dota_gcmessages_server.proto
+https://github.com/SteamDatabase/GameTracking-Dota2/raw/master/Protobufs/network_connection.proto

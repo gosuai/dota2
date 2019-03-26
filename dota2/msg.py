@@ -17,6 +17,8 @@ from dota2.protobufs import (
     dota_gcmessages_client_tournament_pb2,
     dota_gcmessages_client_watch_pb2,
     econ_gcmessages_pb2,
+    dota_gcmessages_server_pb2,
+    network_connection_pb2,
 )
 
 
@@ -74,6 +76,8 @@ def find_proto(emsg):
                    dota_gcmessages_client_tournament_pb2,
                    dota_gcmessages_client_watch_pb2,
                    econ_gcmessages_pb2,
+                   dota_gcmessages_server_pb2,
+                   network_connection_pb2,
                   ):
 
         proto = getattr(module, emsg.name.replace("EMsg", "CMsg"), None)
