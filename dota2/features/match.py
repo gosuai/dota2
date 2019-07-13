@@ -1,5 +1,5 @@
 from steam.enums import EResult
-from dota2.enums import EDOTAGCMsg
+from dota2.enums import EDOTAGCMsg, EGCBaseClientMsg
 
 class Match(object):
     def __init__(self):
@@ -51,7 +51,10 @@ class Match(object):
                               })
 
         def wrap_match_details(message):
-            eresult = EResult(message.result)
+            if message.msg is EGCBaseClientMsg.EMsgGCToClientRequestDropped:
+                eresult = EResult.Fail
+            else:
+                eresult = EResult(message.result)
             match = message.match if eresult == EResult.OK else None
             self.emit('match_details', match_id, eresult, match)
 
