@@ -1,5 +1,7 @@
 syntax = "proto2";
 package dota;
+import "dota_shared_enums.proto";
+
 option optimize_for = SPEED;
 option py_generic_services = false;
 
@@ -13,7 +15,7 @@ enum ETeamInviteResult {
 	TEAM_INVITE_ERROR_INVITEE_BUSY = 6;
 	TEAM_INVITE_ERROR_INVITEE_ALREADY_MEMBER = 7;
 	TEAM_INVITE_ERROR_INVITEE_AT_TEAM_LIMIT = 8;
-	TEAM_INVITE_ERROR_INVITEE_INSUFFICIENT_LEVEL = 9;
+	TEAM_INVITE_ERROR_INVITEE_INSUFFICIENT_PLAY_TIME = 9;
 	TEAM_INVITE_ERROR_INVITER_INVALID_ACCOUNT_TYPE = 10;
 	TEAM_INVITE_ERROR_INVITER_NOT_ADMIN = 11;
 	TEAM_INVITE_ERROR_INCORRECT_USER_RESPONDED = 12;
@@ -71,7 +73,12 @@ message CMsgDOTATeamInfo {
 		optional uint32 account_id = 1;
 		optional uint32 time_joined = 2;
 		optional bool admin = 3;
-		optional bool sub = 4;
+	}
+
+	message AuditEntry {
+		optional uint32 audit_action = 1;
+		optional uint32 timestamp = 2;
+		optional uint32 account_id = 3;
 	}
 
 	repeated dota.CMsgDOTATeamInfo.Member members = 1;
@@ -80,7 +87,6 @@ message CMsgDOTATeamInfo {
 	optional string tag = 4;
 	optional uint32 time_created = 5;
 	optional bool pro = 6;
-	optional bool locked = 7;
 	optional bool pickup_team = 8;
 	optional uint64 ugc_logo = 9;
 	optional uint64 ugc_base_logo = 10;
@@ -90,13 +96,15 @@ message CMsgDOTATeamInfo {
 	optional string url = 14;
 	optional uint32 wins = 15;
 	optional uint32 losses = 16;
-	optional uint32 rank = 17;
-	optional uint32 calibration_games_remaining = 18;
 	optional uint32 games_played_total = 19;
 	optional uint32 games_played_matchmaking = 20;
-	repeated uint32 leagues_participated = 21;
-	repeated uint64 top_match_ids = 22;
-	repeated uint64 recent_match_ids = 23;
+	repeated uint32 registered_member_account_ids = 30;
+	repeated dota.CMsgDOTATeamInfo.AuditEntry audit_entries = 31;
+	optional dota.ELeagueRegion region = 29 [default = LEAGUE_REGION_UNSET];
+}
+
+message CMsgDOTATeamInfoRequest {
+	optional dota.CMsgDOTATeamInfo result = 1;
 }
 
 message CMsgDOTATeamsInfo {
@@ -201,7 +209,7 @@ message CMsgDOTATeamInvite_InviterToGC {
 message CMsgDOTATeamInvite_GCImmediateResponseToInviter {
 	optional dota.ETeamInviteResult result = 1 [default = TEAM_INVITE_SUCCESS];
 	optional string invitee_name = 2;
-	optional uint32 required_badge_level = 3;
+	optional uint32 required_play_time = 3;
 }
 
 message CMsgDOTATeamInvite_GCRequestToInvitee {
@@ -261,27 +269,6 @@ message CMsgDOTATransferTeamAdminResponse {
 	optional dota.CMsgDOTATransferTeamAdminResponse.Result result = 1 [default = SUCCESS];
 }
 
-message CMsgDOTAChangeTeamSub {
-	optional uint32 team_id = 1;
-	optional uint32 member_account_id = 2;
-	optional uint32 sub_account_id = 3;
-}
-
-message CMsgDOTAChangeTeamSubResponse {
-	enum Result {
-		SUCCESS = 0;
-		FAILURE_INVALID_ACCOUNT_TYPE = 1;
-		FAILURE_SAME_ACCOUNT = 2;
-		FAILURE_NOT_ADMIN = 3;
-		FAILURE_NOT_MEMBER = 4;
-		FAILURE_NOT_SUB = 5;
-		FAILURE_ALREADY_SUB = 6;
-		FAILURE_UNSPECIFIED_ERROR = 7;
-	}
-
-	optional dota.CMsgDOTAChangeTeamSubResponse.Result result = 1 [default = SUCCESS];
-}
-
 message CMsgDOTALeaveTeam {
 	optional uint32 team_id = 1;
 }
@@ -300,4 +287,3 @@ message CMsgDOTALeaveTeamResponse {
 message CMsgDOTABetaParticipation {
 	optional uint32 access_rights = 1;
 }
-

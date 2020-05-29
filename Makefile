@@ -62,7 +62,7 @@ pb_fetch:
 
 pb_compile:
 	for filepath in `ls ./protobufs/*.proto`; do \
-		protoc3 --python_out ./dota2/protobufs/ --proto_path=./protobufs "$$filepath"; \
+		protoc --python_out ./dota2/protobufs/ --proto_path=./protobufs "$$filepath"; \
 	done;
 	sed -i '/^import sys/! s/^import /import dota2.protobufs./' dota2/protobufs/*_pb2.py
 

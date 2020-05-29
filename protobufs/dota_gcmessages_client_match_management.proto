@@ -22,7 +22,7 @@ enum EStartFindingMatchResult {
 	k_EStartFindingMatchResult_CompetitiveNoLowPriority = 106;
 	k_EStartFindingMatchResult_CompetitiveNotUnlocked = 107;
 	k_EStartFindingMatchResult_GameModeNotUnlocked = 108;
-	k_EStartFindingMatchResult_CompetitiveNotEnoughSkillData = 109;
+	k_EStartFindingMatchResult_CompetitiveNotEnoughPlayTime = 109;
 	k_EStartFindingMatchResult_MissingInitialSkill = 110;
 	k_EStartFindingMatchResult_CompetitiveRankSpreadTooLarge = 111;
 	k_EStartFindingMatchResult_MemberAlreadyInLobby = 112;
@@ -36,6 +36,13 @@ enum EStartFindingMatchResult {
 	k_EStartFindingMatchResult_WeekendTourneyRecentParticipation = 120;
 	k_EStartFindingMatchResult_MemberMissingAnchoredPhoneNumber = 121;
 	k_EStartFindingMatchResult_NotMemberOfClan = 122;
+	k_EStartFindingMatchResult_CoachesChallengeBadPartySize = 123;
+	k_EStartFindingMatchResult_CoachesChallengeRequirementsNotMet = 124;
+	k_EStartFindingMatchResult_InvalidRoleSelections = 125;
+	k_EStartFindingMatchResult_PhoneNumberDiscrepancy = 126;
+	k_EStartFindingMatchResult_NoQueuePoints = 127;
+	k_EStartFindingMatchResult_MemberMissingGauntletFlag = 128;
+	k_EStartFindingMatchResult_MemberGauntletTooRecent = 129;
 }
 
 message CMsgStartFindingMatch {
@@ -54,6 +61,10 @@ message CMsgStartFindingMatch {
 	optional bool solo_queue = 14;
 	optional uint32 bot_script_index = 15;
 	optional uint32 steam_clan_account_id = 16;
+	optional bool is_challenge_match = 17;
+	optional uint32 lane_selection_flags = 18;
+	optional bool high_priority_disabled = 19;
+	optional bool disable_experimental_gameplay = 20;
 }
 
 message CMsgStartFindingMatchResult {
@@ -62,6 +73,7 @@ message CMsgStartFindingMatchResult {
 	optional string error_token = 3;
 	optional string debug_message = 4;
 	repeated fixed64 responsible_party_members = 5;
+	optional uint32 result_metadata = 6;
 }
 
 message CMsgStopFindingMatch {
@@ -120,11 +132,8 @@ message CMsgPracticeLobbySetDetails {
 	optional uint64 custom_game_id = 29;
 	optional uint32 custom_min_players = 30;
 	optional uint32 custom_max_players = 31;
-	optional uint32 lan_host_ping_to_server_region = 32;
 	optional dota.DOTALobbyVisibility visibility = 33 [default = DOTALobbyVisibility_Public];
 	optional fixed64 custom_game_crc = 34;
-	optional uint32 league_series_id = 35;
-	optional uint32 league_game_id = 36;
 	optional fixed32 custom_game_timestamp = 37;
 	optional uint64 previous_match_override = 38;
 	optional dota.LobbyDotaPauseSetting pause_setting = 42 [default = LobbyDotaPauseSetting_Unlimited];
@@ -133,6 +142,8 @@ message CMsgPracticeLobbySetDetails {
 	optional uint64 bot_dire = 45;
 	optional dota.DOTASelectionPriorityRules selection_priority_rules = 46 [default = k_DOTASelectionPriorityRules_Manual];
 	optional bool custom_game_penalties = 47;
+	optional string lan_host_ping_location = 48;
+	optional uint32 league_node_id = 49;
 }
 
 message CMsgPracticeLobbyCreate {
@@ -212,8 +223,6 @@ message CMsgPracticeLobbyListResponseEntry {
 	repeated dota.CMsgPracticeLobbyListResponseEntry.CLobbyMember members = 5;
 	optional bool requires_pass_key = 6;
 	optional uint32 leader_account_id = 7;
-	optional uint32 guild_id = 8;
-	optional uint64 guild_logo = 9;
 	optional string name = 10;
 	optional string custom_game_mode = 11;
 	optional dota.DOTA_GameMode game_mode = 12 [default = DOTA_GAMEMODE_NONE];
@@ -222,8 +231,8 @@ message CMsgPracticeLobbyListResponseEntry {
 	optional string custom_map_name = 15;
 	optional uint32 max_player_count = 16;
 	optional uint32 server_region = 17;
-	optional uint32 lan_host_ping_to_server_region = 18;
 	optional uint32 league_id = 19;
+	optional string lan_host_ping_location = 20;
 }
 
 message CMsgPracticeLobbyListResponse {
@@ -259,14 +268,6 @@ message CMsgFriendPracticeLobbyListResponse {
 	repeated dota.CMsgPracticeLobbyListResponseEntry lobbies = 1;
 }
 
-message CMsgGuildmatePracticeLobbyListRequest {
-	repeated uint32 guilds = 1;
-}
-
-message CMsgGuildmatePracticeLobbyListResponse {
-	repeated dota.CMsgPracticeLobbyListResponseEntry lobbies = 1;
-}
-
 message CMsgJoinableCustomGameModesRequest {
 	optional uint32 server_region = 1;
 }
@@ -296,8 +297,8 @@ message CMsgJoinableCustomLobbiesResponseEntry {
 	optional string custom_map_name = 7;
 	optional uint32 max_player_count = 8;
 	optional uint32 server_region = 9;
-	optional uint32 lan_host_ping_to_server_region = 10;
 	optional bool has_pass_key = 11;
+	optional string lan_host_ping_location = 12;
 }
 
 message CMsgJoinableCustomLobbiesResponse {
@@ -449,3 +450,18 @@ message CMsgGCToClientSteamDatagramTicket {
 	optional bytes serialized_ticket = 16;
 }
 
+message CMsgGCToClientRequestLaneSelection {
+}
+
+message CMsgGCToClientRequestLaneSelectionResponse {
+	optional uint32 lane_selection_flags = 1;
+	optional bool high_priority_disabled = 2;
+}
+
+message CMsgGCToClientRequestMMInfo {
+}
+
+message CMsgClientToGCMMInfo {
+	optional uint32 lane_selection_flags = 1;
+	optional bool high_priority_disabled = 2;
+}

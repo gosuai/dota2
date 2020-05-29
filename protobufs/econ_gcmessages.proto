@@ -100,15 +100,14 @@ enum EGCItemMsg {
 	k_EMsgGCServerRentalsBase = 1700;
 	k_EMsgGCDev_NewItemRequest = 2001;
 	k_EMsgGCDev_NewItemRequestResponse = 2002;
+	k_EMsgGCDev_UnlockAllItemStylesRequest = 2003;
+	k_EMsgGCDev_UnlockAllItemStylesResponse = 2004;
 	k_EMsgGCStorePurchaseFinalize = 2504;
 	k_EMsgGCStorePurchaseFinalizeResponse = 2505;
 	k_EMsgGCStorePurchaseCancel = 2506;
 	k_EMsgGCStorePurchaseCancelResponse = 2507;
 	k_EMsgGCStorePurchaseInit = 2510;
 	k_EMsgGCStorePurchaseInitResponse = 2511;
-	k_EMsgGCBannedWordListRequest = 2512;
-	k_EMsgGCBannedWordListResponse = 2513;
-	k_EMsgGCToGCBannedWordListBroadcast = 2514;
 	k_EMsgGCToGCBannedWordListUpdated = 2515;
 	k_EMsgGCToGCDirtySDOCache = 2516;
 	k_EMsgGCToGCDirtyMultipleSDOCache = 2517;
@@ -184,6 +183,15 @@ enum EGCItemMsg {
 	k_EMsgGCGetAccountSubscriptionItemResponse = 2596;
 	k_EMsgGCToGCBroadcastMessageFromSub = 2598;
 	k_EMsgGCToClientCurrencyPricePoints = 2599;
+	k_EMsgGCToGCAddSubscriptionTime = 2600;
+	k_EMsgGCToGCFlushSteamInventoryCache = 2601;
+	k_EMsgGCRequestCrateEscalationLevel = 2602;
+	k_EMsgGCRequestCrateEscalationLevelResponse = 2603;
+	k_EMsgGCToGCUpdateSubscriptionItems = 2604;
+	k_EMsgGCToGCSelfPing = 2605;
+	k_EMsgGCToGCGetInfuxIntervalStats = 2606;
+	k_EMsgGCToGCGetInfuxIntervalStatsResponse = 2607;
+	k_EMsgGCToGCPurchaseSucceeded = 2608;
 }
 
 enum EItemPurgatoryResponse_Finalize {
@@ -201,7 +209,6 @@ enum EItemPurgatoryResponse_Refund {
 	k_ItemPurgatoryResponse_Refund_Failed_CouldNotFindItem = 2;
 	k_ItemPurgatoryResponse_Refund_Failed_NoSOCache = 3;
 	k_ItemPurgatoryResponse_Refund_Failed_NoDetail = 4;
-	k_ItemPurgatoryResponse_Refund_Failed_NexonWebAPI = 5;
 }
 
 enum EGCMsgInitiateTradeResponse {
@@ -253,6 +260,7 @@ message CMsgEconPlayerStrangeCountAdjustment {
 
 	optional uint32 account_id = 1;
 	repeated dota.CMsgEconPlayerStrangeCountAdjustment.CStrangeCountAdjustment strange_count_adjustments = 2;
+	optional bool turbo_mode = 3;
 }
 
 message CMsgRequestItemPurgatory_FinalizePurchase {
@@ -334,14 +342,6 @@ message CMsgLookupMultipleAccountNamesResponse {
 	repeated dota.CMsgLookupMultipleAccountNamesResponse.Account accounts = 1;
 }
 
-message CMsgGCToGCGetUserPCBangNo {
-	optional uint32 account_id = 1;
-}
-
-message CMsgGCToGCGetUserPCBangNoResponse {
-	optional uint32 pc_bang_no = 1;
-}
-
 message CMsgRequestCrateItems {
 	optional uint32 crate_item_def = 1;
 }
@@ -354,7 +354,24 @@ message CMsgRequestCrateItemsResponse {
 
 	optional uint32 response = 1;
 	repeated uint32 item_defs = 2;
-	optional uint32 peek_item_def = 3;
+	repeated uint32 peek_item_defs = 3;
+}
+
+message CMsgRequestCrateEscalationLevel {
+	optional uint32 crate_item_def = 1;
+}
+
+message CMsgRequestCrateEscalationLevelResponse {
+	enum EResult {
+		k_Succeeded = 0;
+		k_Failed = 1;
+	}
+
+	optional uint32 response = 1;
+	optional uint32 escalation_level0 = 2;
+	optional uint32 escalation_level1 = 3;
+	optional uint32 escalation_level2 = 4;
+	optional uint32 escalation_level3 = 5;
 }
 
 message CMsgGCToGCCanUseDropRateBonus {
@@ -397,12 +414,19 @@ message CMsgGCToGCCheckAccountTradeStatusResponse {
 	optional uint32 error_code = 2;
 }
 
+message CMsgGCToGCAddSubscriptionTime {
+	optional uint32 account_id = 1;
+	repeated uint32 matching_subscription_def_indexes = 2;
+	optional uint32 additional_seconds = 3;
+}
+
 message CMsgGCToGCGrantAccountRolledItems {
 	message Item {
 		message DynamicAttribute {
 			optional string name = 1;
 			optional uint32 value_uint32 = 2;
 			optional float value_float = 3;
+			optional string value_string = 4;
 		}
 
 		message AdditionalAuditEntry {
@@ -474,6 +498,9 @@ message CMsgGCPartnerRechargeRedirectURLResponse {
 message CMsgGCEconSQLWorkItemEmbeddedRollbackData {
 	optional uint32 account_id = 1;
 	optional uint64 deleted_item_id = 2;
+	optional uint32 old_audit_action = 3;
+	optional uint32 new_audit_action = 4;
+	optional uint32 expected_audit_action = 5;
 }
 
 message CMsgCraftStatue {
@@ -509,6 +536,14 @@ message CMsgDevNewItemRequest {
 }
 
 message CMsgDevNewItemRequestResponse {
+	optional bool success = 1;
+}
+
+message CMsgDevUnlockAllItemStyles {
+	optional uint64 item_id = 1;
+}
+
+message CMsgDevUnlockAllItemStylesResponse {
 	optional bool success = 1;
 }
 
@@ -579,6 +614,7 @@ message CMsgClientToGCUnpackBundleResponse {
 
 	repeated uint64 unpacked_item_ids = 1;
 	optional dota.CMsgClientToGCUnpackBundleResponse.EUnpackBundle response = 2 [default = k_UnpackBundle_Succeeded];
+	repeated uint32 unpacked_item_def_indexes = 3;
 }
 
 message CMsgGCToClientStoreTransactionCompleted {
@@ -861,6 +897,7 @@ message CMsgClientToGCCreateStaticRecipeResponse {
 		eResponse_InvalidItems = 2;
 		eResponse_InternalError = 3;
 		eResponse_MissingLeague = 4;
+		eResponse_MissingEvent = 5;
 	}
 
 	optional dota.CMsgClientToGCCreateStaticRecipeResponse.EResponse response = 1 [default = eResponse_Success];
@@ -927,6 +964,7 @@ message CMsgGCToGCConsoleOutput {
 	optional string initiator = 1;
 	optional uint32 sending_gc = 2;
 	repeated dota.CMsgGCToGCConsoleOutput.OutputLine msgs = 3;
+	optional bool is_last_for_source_job = 4;
 }
 
 message CMsgItemAges {
@@ -953,6 +991,7 @@ message CMsgGCToGCClientServerVersionsUpdated {
 	optional uint32 client_active_version = 2;
 	optional uint32 server_active_version = 3;
 	optional uint32 server_deployed_version = 4;
+	optional uint32 what_changed = 5;
 }
 
 message CMsgGCToGCBroadcastMessageFromSub {
@@ -972,3 +1011,56 @@ message CMsgGCToClientCurrencyPricePoints {
 	repeated dota.CMsgGCToClientCurrencyPricePoints.Currency currencies = 2;
 }
 
+message CMsgBannedWordList {
+	optional uint32 version = 1;
+	repeated string banned_words = 2;
+}
+
+message CEcon_FlushInventoryCache_Request {
+	optional uint64 steamid = 1;
+	optional uint32 appid = 2;
+	optional uint64 contextid = 3;
+}
+
+message CEcon_FlushInventoryCache_Response {
+	optional bool success = 1;
+}
+
+message CMsgGCToGCFlushSteamInventoryCache {
+	message Key {
+		optional uint64 steamid = 1;
+		optional uint64 contextid = 2;
+	}
+
+	repeated dota.CMsgGCToGCFlushSteamInventoryCache.Key keys = 1;
+}
+
+message CMsgGCToGCUpdateSubscriptionItems {
+	optional uint32 account_id = 1;
+	optional bool always_notify = 2;
+}
+
+message CMsgGCToGCSelfPing {
+	optional uint32 sample_id = 1;
+}
+
+message CMsgGCToGCGetInfuxIntervalStats {
+}
+
+message CMsgGCToGCGetInfuxIntervalStatsResponse {
+	repeated fixed32 stat_ids = 1 [packed = true];
+	repeated uint64 stat_total = 2 [packed = true];
+	repeated uint32 stat_samples = 3 [packed = true];
+	repeated uint32 stat_max = 4 [packed = true];
+	optional uint32 sample_duration_ms = 5;
+}
+
+message CMsgGCToGCPurchaseSucceeded {
+}
+
+message CExtraMsgBlock {
+	optional uint32 msg_type = 1;
+	optional bytes contents = 2;
+	optional uint64 msg_key = 3;
+	optional bool is_compressed = 4;
+}
