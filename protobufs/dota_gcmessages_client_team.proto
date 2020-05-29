@@ -287,4 +287,3 @@ message CMsgDOTALeaveTeamResponse {
 message CMsgDOTABetaParticipation {
 	optional uint32 access_rights = 1;
 }
-
