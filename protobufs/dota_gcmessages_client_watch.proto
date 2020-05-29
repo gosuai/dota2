@@ -227,4 +227,3 @@ message CMsgDOTASeries {
 	repeated dota.CMsgDOTAMatchMinimal match_minimal = 5;
 	optional dota.CMsgDOTASeries.LiveGame live_game = 6;
 }
-
