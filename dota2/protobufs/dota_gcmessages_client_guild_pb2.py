@@ -19,7 +19,8 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='dota',
   syntax='proto2',
   serialized_options=b'H\001\220\001\000',
-  serialized_pb=b'\n\"dota_gcmessages_client_guild.proto\x12\x04\x64ota\"\xcb\x03\n\rCMsgGuildInfo\x12\x12\n\nguild_name\x18\x01 \x01(\t\x12\x11\n\tguild_tag\x18\x02 \x01(\t\x12\x19\n\x11\x63reated_timestamp\x18\x03 \x01(\r\x12\x16\n\x0eguild_language\x18\x04 \x01(\r\x12\x13\n\x0bguild_flags\x18\x05 \x01(\r\x12\x12\n\nguild_logo\x18\x07 \x01(\x04\x12\x14\n\x0cguild_region\x18\x08 \x01(\r\x12\x1b\n\x13guild_chat_group_id\x18\t \x01(\x04\x12\x19\n\x11guild_description\x18\n \x01(\t\x12\x1f\n\x17\x64\x65\x66\x61ult_chat_channel_id\x18\x0b \x01(\x04\x12\x1b\n\x13guild_primary_color\x18\x0c \x01(\r\x12\x1d\n\x15guild_secondary_color\x18\r \x01(\r\x12\x15\n\rguild_pattern\x18\x0e \x01(\r\x12!\n\x19guild_refresh_time_offset\x18\x0f \x01(\r\x12 \n\x18guild_required_rank_tier\x18\x10 \x01(\r\x12\x1c\n\x14guild_motd_timestamp\x18\x11 \x01(\r\x12\x12\n\nguild_motd\x18\x12 \x01(\t\"\xc2\x01\n\x10\x43MsgGuildSummary\x12\'\n\nguild_info\x18\x01 \x01(\x0b\x32\x13.dota.CMsgGuildInfo\x12\x14\n\x0cmember_count\x18\x02 \x01(\r\x12\x38\n\x0c\x65vent_points\x18\x03 \x03(\x0b\x32\".dota.CMsgGuildSummary.EventPoints\x1a\x35\n\x0b\x45ventPoints\x12\x10\n\x08\x65vent_id\x18\x01 \x01(\r\x12\x14\n\x0cguild_points\x18\x02 \x01(\r\"[\n\rCMsgGuildRole\x12\x0f\n\x07role_id\x18\x01 \x01(\r\x12\x11\n\trole_name\x18\x02 \x01(\t\x12\x12\n\nrole_flags\x18\x03 \x01(\r\x12\x12\n\nrole_order\x18\x04 \x01(\r\"e\n\x0f\x43MsgGuildMember\x12\x19\n\x11member_account_id\x18\x01 \x01(\r\x12\x16\n\x0emember_role_id\x18\x02 \x01(\r\x12\x1f\n\x17member_joined_timestamp\x18\x03 \x01(\r\"b\n\x0f\x43MsgGuildInvite\x12\x1c\n\x14requester_account_id\x18\x01 \x01(\r\x12\x19\n\x11target_account_id\x18\x02 \x01(\r\x12\x16\n\x0etimestamp_sent\x18\x03 \x01(\r\"\xd0\x01\n\rCMsgGuildData\x12\x10\n\x08guild_id\x18\x01 \x01(\r\x12\'\n\nguild_info\x18\x02 \x01(\x0b\x32\x13.dota.CMsgGuildInfo\x12(\n\x0bguild_roles\x18\x03 \x03(\x0b\x32\x13.dota.CMsgGuildRole\x12,\n\rguild_members\x18\x04 \x03(\x0b\x32\x15.dota.CMsgGuildMember\x12,\n\rguild_invites\x18\x05 \x03(\x0b\x32\x15.dota.CMsgGuildInvite\"`\n\x16\x43MsgAccountGuildInvite\x12\x10\n\x08guild_id\x18\x01 \x01(\r\x12\x1c\n\x14requester_account_id\x18\x02 \x01(\r\x12\x16\n\x0etimestamp_sent\x18\x03 \x01(\r\"e\n\x1b\x43MsgAccountGuildMemberships\x12\x11\n\tguild_ids\x18\x01 \x03(\r\x12\x33\n\rguild_invites\x18\x02 \x03(\x0b\x32\x1c.dota.CMsgAccountGuildInvite\";\n\x14\x43MsgGuildPersonaInfo\x12\x10\n\x08guild_id\x18\x01 \x01(\r\x12\x11\n\tguild_tag\x18\x02 \x01(\t\"W\n\x1c\x43MsgAccountGuildsPersonaInfo\x12\x37\n\x13guild_persona_infos\x18\x01 \x03(\x0b\x32\x1a.dota.CMsgGuildPersonaInfo\"\x94\x01\n\x12\x43MsgGuildFeedEvent\x12\x15\n\rfeed_event_id\x18\x01 \x01(\x04\x12\x11\n\ttimestamp\x18\x02 \x01(\r\x12\x12\n\nevent_type\x18\x03 \x01(\r\x12\x14\n\x0cparam_uint_1\x18\x04 \x01(\r\x12\x14\n\x0cparam_uint_2\x18\x05 \x01(\r\x12\x14\n\x0cparam_uint_3\x18\x06 \x01(\r\"\x91\x01\n\x19\x43MsgClientToGCCreateGuild\x12\'\n\nguild_info\x18\x01 \x01(\x0b\x32\x13.dota.CMsgGuildInfo\x12K\n\x0fguild_chat_type\x18\x02 \x01(\x0e\x32\x14.dota.EGuildChatType:\x1ck_EGuildChatType_Unspecified\"\xc9\x03\n!CMsgClientToGCCreateGuildResponse\x12S\n\x06result\x18\x01 \x01(\x0e\x32\x31.dota.CMsgClientToGCCreateGuildResponse.EResponse:\x10k_eInternalError\x12\x10\n\x08guild_id\x18\x02 \x01(\r\"\xbc\x02\n\tEResponse\x12\x14\n\x10k_eInternalError\x10\x00\x12\x0e\n\nk_eSuccess\x10\x01\x12\x0e\n\nk_eTooBusy\x10\x02\x12\x0f\n\x0bk_eDisabled\x10\x03\x12\x0e\n\nk_eTimeout\x10\x04\x12\x12\n\x0ek_eInvalidName\x10\x05\x12\x16\n\x12k_eNameAlreadyUsed\x10\x06\x12\x11\n\rk_eInvalidTag\x10\x07\x12\x15\n\x11k_eTagAlreadyUsed\x10\x08\x12\x19\n\x15k_eInvalidDescription\x10\t\x12\x14\n\x10k_eInvalidRegion\x10\n\x12\x12\n\x0ek_eInvalidLogo\x10\x0b\x12\x16\n\x12k_eDoesNotOwnEvent\x10\x0c\x12\x11\n\rk_eGuildLimit\x10\r\x12\x12\n\x0ek_eInvalidMotD\x10\x0e\"\xa4\x01\n\x1a\x43MsgClientToGCSetGuildInfo\x12\x10\n\x08guild_id\x18\x01 \x01(\r\x12\'\n\nguild_info\x18\x02 \x01(\x0b\x32\x13.dota.CMsgGuildInfo\x12K\n\x0fguild_chat_type\x18\x03 \x01(\x0e\x32\x14.dota.EGuildChatType:\x1ck_EGuildChatType_Unspecified\"\xb0\x03\n\"CMsgClientToGCSetGuildInfoResponse\x12T\n\x06result\x18\x01 \x01(\x0e\x32\x32.dota.CMsgClientToGCSetGuildInfoResponse.EResponse:\x10k_eInternalError\"\xb3\x02\n\tEResponse\x12\x14\n\x10k_eInternalError\x10\x00\x12\x0e\n\nk_eSuccess\x10\x01\x12\x0e\n\nk_eTooBusy\x10\x02\x12\x0f\n\x0bk_eDisabled\x10\x03\x12\x0e\n\nk_eTimeout\x10\x04\x12\x13\n\x0fk_eInvalidGuild\x10\x05\x12\x10\n\x0ck_eNotMember\x10\x06\x12\x13\n\x0fk_eNoPermission\x10\x07\x12\x12\n\x0ek_eMotDTooLong\x10\x08\x12\x1e\n\x1ak_eNameChangeNoPermissions\x10\t\x12\x1d\n\x19k_eTagChangeNoPermissions\x10\n\x12\x12\n\x0ek_eNameInvalid\x10\x0b\x12\x11\n\rk_eTagInvalid\x10\x0c\x12\x19\n\x15k_eDescriptionInvalid\x10\r\"2\n\x1e\x43MsgClientToGCRequestGuildData\x12\x10\n\x08guild_id\x18\x01 \x01(\r\"\xb7\x02\n&CMsgClientToGCRequestGuildDataResponse\x12X\n\x06result\x18\x01 \x01(\x0e\x32\x36.dota.CMsgClientToGCRequestGuildDataResponse.EResponse:\x10k_eInternalError\x12\'\n\nguild_data\x18\x02 \x01(\x0b\x32\x13.dota.CMsgGuildData\"\x89\x01\n\tEResponse\x12\x14\n\x10k_eInternalError\x10\x00\x12\x0e\n\nk_eSuccess\x10\x01\x12\x0e\n\nk_eTooBusy\x10\x02\x12\x0f\n\x0bk_eDisabled\x10\x03\x12\x0e\n\nk_eTimeout\x10\x04\x12\x13\n\x0fk_eInvalidGuild\x10\x05\x12\x10\n\x0ck_eNotMember\x10\x06\"_\n\x1e\x43MsgGCToClientGuildDataUpdated\x12\'\n\nguild_data\x18\x01 \x01(\x0b\x32\x13.dota.CMsgGuildData\x12\x14\n\x0cupdate_flags\x18\x02 \x01(\r\"&\n$CMsgClientToGCRequestGuildMembership\"\xb0\x02\n,CMsgClientToGCRequestGuildMembershipResponse\x12^\n\x06result\x18\x01 \x01(\x0e\x32<.dota.CMsgClientToGCRequestGuildMembershipResponse.EResponse:\x10k_eInternalError\x12<\n\x11guild_memberships\x18\x02 \x01(\x0b\x32!.dota.CMsgAccountGuildMemberships\"b\n\tEResponse\x12\x14\n\x10k_eInternalError\x10\x00\x12\x0e\n\nk_eSuccess\x10\x01\x12\x0e\n\nk_eTooBusy\x10\x02\x12\x0f\n\x0bk_eDisabled\x10\x03\x12\x0e\n\nk_eTimeout\x10\x04\"d\n$CMsgGCToClientGuildMembershipUpdated\x12<\n\x11guild_memberships\x18\x01 \x01(\x0b\x32!.dota.CMsgAccountGuildMemberships\"5\n!CMsgClientToGCRequestGuildSummary\x12\x10\n\x08guild_id\x18\x01 \x01(\r\"\xb0\x02\n)CMsgClientToGCRequestGuildSummaryResponse\x12[\n\x06result\x18\x01 \x01(\x0e\x32\x39.dota.CMsgClientToGCRequestGuildSummaryResponse.EResponse:\x10k_eInternalError\x12-\n\rguild_summary\x18\x02 \x01(\x0b\x32\x16.dota.CMsgGuildSummary\"w\n\tEResponse\x12\x14\n\x10k_eInternalError\x10\x00\x12\x0e\n\nk_eSuccess\x10\x01\x12\x0e\n\nk_eTooBusy\x10\x02\x12\x0f\n\x0bk_eDisabled\x10\x03\x12\x0e\n\nk_eTimeout\x10\x04\x12\x13\n\x0fk_eInvalidGuild\x10\x05\"+\n\x17\x43MsgClientToGCJoinGuild\x12\x10\n\x08guild_id\x18\x01 \x01(\r\"\xdd\x02\n\x1f\x43MsgClientToGCJoinGuildResponse\x12Q\n\x06result\x18\x01 \x01(\x0e\x32/.dota.CMsgClientToGCJoinGuildResponse.EResponse:\x10k_eInternalError\"\xe6\x01\n\tEResponse\x12\x14\n\x10k_eInternalError\x10\x00\x12\x0e\n\nk_eSuccess\x10\x01\x12\x0e\n\nk_eTooBusy\x10\x02\x12\x0f\n\x0bk_eDisabled\x10\x03\x12\x0e\n\nk_eTimeout\x10\x04\x12\x13\n\x0fk_eInvalidGuild\x10\x05\x12\x10\n\x0ck_eGuildFull\x10\x06\x12\x14\n\x10k_eAlreadyMember\x10\x07\x12\x11\n\rk_eGuildLimit\x10\x08\x12\x1a\n\x16k_eGuildRequiresInvite\x10\t\x12\x16\n\x12k_eGuildRankTooLow\x10\n\",\n\x18\x43MsgClientToGCLeaveGuild\x12\x10\n\x08guild_id\x18\x01 \x01(\r\"\x94\x02\n CMsgClientToGCLeaveGuildResponse\x12R\n\x06result\x18\x01 \x01(\x0e\x32\x30.dota.CMsgClientToGCLeaveGuildResponse.EResponse:\x10k_eInternalError\"\x9b\x01\n\tEResponse\x12\x14\n\x10k_eInternalError\x10\x00\x12\x0e\n\nk_eSuccess\x10\x01\x12\x0e\n\nk_eTooBusy\x10\x02\x12\x0f\n\x0bk_eDisabled\x10\x03\x12\x0e\n\nk_eTimeout\x10\x04\x12\x13\n\x0fk_eInvalidGuild\x10\x05\x12\x10\n\x0ck_eNotMember\x10\x06\x12\x10\n\x0ck_eLastAdmin\x10\x07\"L\n\x1d\x43MsgClientToGCKickGuildMember\x12\x10\n\x08guild_id\x18\x01 \x01(\r\x12\x19\n\x11target_account_id\x18\x02 \x01(\r\"\xd7\x02\n%CMsgClientToGCKickGuildMemberResponse\x12W\n\x06result\x18\x01 \x01(\x0e\x32\x35.dota.CMsgClientToGCKickGuildMemberResponse.EResponse:\x10k_eInternalError\"\xd4\x01\n\tEResponse\x12\x14\n\x10k_eInternalError\x10\x00\x12\x0e\n\nk_eSuccess\x10\x01\x12\x0e\n\nk_eTooBusy\x10\x02\x12\x0f\n\x0bk_eDisabled\x10\x03\x12\x0e\n\nk_eTimeout\x10\x04\x12\x13\n\x0fk_eInvalidGuild\x10\x05\x12\x19\n\x15k_eRequesterNotMember\x10\x06\x12\x16\n\x12k_eTargetNotMember\x10\x07\x12\x13\n\x0fk_eNoPermission\x10\x08\x12\x13\n\x0fk_eCantKickSelf\x10\t\"g\n CMsgClientToGCSetGuildMemberRole\x12\x10\n\x08guild_id\x18\x01 \x01(\r\x12\x19\n\x11target_account_id\x18\x02 \x01(\r\x12\x16\n\x0etarget_role_id\x18\x03 \x01(\r\"\xf3\x02\n(CMsgClientToGCSetGuildMemberRoleResponse\x12Z\n\x06result\x18\x01 \x01(\x0e\x32\x38.dota.CMsgClientToGCSetGuildMemberRoleResponse.EResponse:\x10k_eInternalError\"\xea\x01\n\tEResponse\x12\x14\n\x10k_eInternalError\x10\x00\x12\x0e\n\nk_eSuccess\x10\x01\x12\x0e\n\nk_eTooBusy\x10\x02\x12\x0f\n\x0bk_eDisabled\x10\x03\x12\x0e\n\nk_eTimeout\x10\x04\x12\x13\n\x0fk_eInvalidGuild\x10\x05\x12\x19\n\x15k_eRequesterNotMember\x10\x06\x12\x16\n\x12k_eTargetNotMember\x10\x07\x12\x13\n\x0fk_eNoPermission\x10\x08\x12\x12\n\x0ek_eInvalidRole\x10\t\x12\x15\n\x11k_eAdminViolation\x10\n\"J\n\x1b\x43MsgClientToGCInviteToGuild\x12\x10\n\x08guild_id\x18\x01 \x01(\r\x12\x19\n\x11target_account_id\x18\x02 \x01(\r\"\x84\x03\n#CMsgClientToGCInviteToGuildResponse\x12U\n\x06result\x18\x01 \x01(\x0e\x32\x33.dota.CMsgClientToGCInviteToGuildResponse.EResponse:\x10k_eInternalError\"\x85\x02\n\tEResponse\x12\x14\n\x10k_eInternalError\x10\x00\x12\x0e\n\nk_eSuccess\x10\x01\x12\x0e\n\nk_eTooBusy\x10\x02\x12\x0f\n\x0bk_eDisabled\x10\x03\x12\x0e\n\nk_eTimeout\x10\x04\x12\x13\n\x0fk_eInvalidGuild\x10\x05\x12\x10\n\x0ck_eGuildFull\x10\x06\x12\x19\n\x15k_eRequesterNotMember\x10\x07\x12\x15\n\x11k_eAlreadyAMember\x10\x08\x12\x15\n\x11k_eAlreadyInvited\x10\t\x12\x1a\n\x16k_eNoInvitePermissions\x10\n\x12\x15\n\x11k_eTooManyInvites\x10\x0b\"6\n\"CMsgClientToGCDeclineInviteToGuild\x12\x10\n\x08guild_id\x18\x01 \x01(\r\"\x9a\x02\n*CMsgClientToGCDeclineInviteToGuildResponse\x12\\\n\x06result\x18\x01 \x01(\x0e\x32:.dota.CMsgClientToGCDeclineInviteToGuildResponse.EResponse:\x10k_eInternalError\"\x8d\x01\n\tEResponse\x12\x14\n\x10k_eInternalError\x10\x00\x12\x0e\n\nk_eSuccess\x10\x01\x12\x0e\n\nk_eTooBusy\x10\x02\x12\x0f\n\x0bk_eDisabled\x10\x03\x12\x0e\n\nk_eTimeout\x10\x04\x12\x13\n\x0fk_eInvalidGuild\x10\x05\x12\x14\n\x10k_eNoInviteFound\x10\x06\"5\n!CMsgClientToGCAcceptInviteToGuild\x12\x10\n\x08guild_id\x18\x01 \x01(\r\"\xeb\x02\n)CMsgClientToGCAcceptInviteToGuildResponse\x12[\n\x06result\x18\x01 \x01(\x0e\x32\x39.dota.CMsgClientToGCAcceptInviteToGuildResponse.EResponse:\x10k_eInternalError\"\xe0\x01\n\tEResponse\x12\x14\n\x10k_eInternalError\x10\x00\x12\x0e\n\nk_eSuccess\x10\x01\x12\x0e\n\nk_eTooBusy\x10\x02\x12\x0f\n\x0bk_eDisabled\x10\x03\x12\x0e\n\nk_eTimeout\x10\x04\x12\x13\n\x0fk_eInvalidGuild\x10\x05\x12\x14\n\x10k_eNoInviteFound\x10\x06\x12\x10\n\x0ck_eGuildFull\x10\x07\x12\x11\n\rk_eGuildLimit\x10\x08\x12\x15\n\x11k_eInvalidInviter\x10\t\x12\x15\n\x11k_eAlreadyInGuild\x10\n\"P\n!CMsgClientToGCCancelInviteToGuild\x12\x10\n\x08guild_id\x18\x01 \x01(\r\x12\x19\n\x11target_account_id\x18\x02 \x01(\r\"\xae\x02\n)CMsgClientToGCCancelInviteToGuildResponse\x12[\n\x06result\x18\x01 \x01(\x0e\x32\x39.dota.CMsgClientToGCCancelInviteToGuildResponse.EResponse:\x10k_eInternalError\"\xa3\x01\n\tEResponse\x12\x14\n\x10k_eInternalError\x10\x00\x12\x0e\n\nk_eSuccess\x10\x01\x12\x0e\n\nk_eTooBusy\x10\x02\x12\x0f\n\x0bk_eDisabled\x10\x03\x12\x0e\n\nk_eTimeout\x10\x04\x12\x13\n\x0fk_eInvalidGuild\x10\x05\x12\x14\n\x10k_eNoInviteFound\x10\x06\x12\x14\n\x10k_eNoPermissions\x10\x07\"U\n\x1a\x43MsgClientToGCAddGuildRole\x12\x10\n\x08guild_id\x18\x01 \x01(\r\x12\x11\n\trole_name\x18\x02 \x01(\t\x12\x12\n\nrole_flags\x18\x03 \x01(\r\"\x88\x03\n\"CMsgClientToGCAddGuildRoleResponse\x12T\n\x06result\x18\x01 \x01(\x0e\x32\x32.dota.CMsgClientToGCAddGuildRoleResponse.EResponse:\x10k_eInternalError\x12\x0f\n\x07role_id\x18\x02 \x01(\r\"\xfa\x01\n\tEResponse\x12\x14\n\x10k_eInternalError\x10\x00\x12\x0e\n\nk_eSuccess\x10\x01\x12\x0e\n\nk_eTooBusy\x10\x02\x12\x0f\n\x0bk_eDisabled\x10\x03\x12\x0e\n\nk_eTimeout\x10\x04\x12\x13\n\x0fk_eInvalidGuild\x10\x05\x12\x16\n\x12k_eNameAlreadyUsed\x10\x06\x12\x14\n\x10k_eNoPermissions\x10\x07\x12\x13\n\x0fk_eInvalidFlags\x10\x08\x12\x12\n\x0ek_eInvalidName\x10\t\x12\x15\n\x11k_eAdminViolation\x10\n\x12\x13\n\x0fk_eTooManyRoles\x10\x0b\"i\n\x1d\x43MsgClientToGCModifyGuildRole\x12\x10\n\x08guild_id\x18\x01 \x01(\r\x12\x0f\n\x07role_id\x18\x02 \x01(\r\x12\x11\n\trole_name\x18\x03 \x01(\t\x12\x12\n\nrole_flags\x18\x04 \x01(\r\"\xfc\x02\n%CMsgClientToGCModifyGuildRoleResponse\x12W\n\x06result\x18\x01 \x01(\x0e\x32\x35.dota.CMsgClientToGCModifyGuildRoleResponse.EResponse:\x10k_eInternalError\"\xf9\x01\n\tEResponse\x12\x14\n\x10k_eInternalError\x10\x00\x12\x0e\n\nk_eSuccess\x10\x01\x12\x0e\n\nk_eTooBusy\x10\x02\x12\x0f\n\x0bk_eDisabled\x10\x03\x12\x0e\n\nk_eTimeout\x10\x04\x12\x13\n\x0fk_eInvalidGuild\x10\x05\x12\x12\n\x0ek_eInvalidRole\x10\x06\x12\x16\n\x12k_eNameAlreadyUsed\x10\x07\x12\x13\n\x0fk_eInvalidFlags\x10\x08\x12\x12\n\x0ek_eInvalidName\x10\t\x12\x14\n\x10k_eNoPermissions\x10\n\x12\x15\n\x11k_eAdminViolation\x10\x0b\"B\n\x1d\x43MsgClientToGCRemoveGuildRole\x12\x10\n\x08guild_id\x18\x01 \x01(\r\x12\x0f\n\x07role_id\x18\x02 \x01(\r\"\xee\x02\n%CMsgClientToGCRemoveGuildRoleResponse\x12W\n\x06result\x18\x01 \x01(\x0e\x32\x35.dota.CMsgClientToGCRemoveGuildRoleResponse.EResponse:\x10k_eInternalError\"\xeb\x01\n\tEResponse\x12\x14\n\x10k_eInternalError\x10\x00\x12\x0e\n\nk_eSuccess\x10\x01\x12\x0e\n\nk_eTooBusy\x10\x02\x12\x0f\n\x0bk_eDisabled\x10\x03\x12\x0e\n\nk_eTimeout\x10\x04\x12\x13\n\x0fk_eInvalidGuild\x10\x05\x12\x12\n\x0ek_eInvalidRole\x10\x06\x12\x13\n\x0fk_eRoleNotEmpty\x10\x07\x12\x14\n\x10k_eNoPermissions\x10\x08\x12\x15\n\x11k_eAdminViolation\x10\t\x12\x1c\n\x18k_eCantRemoveDefaultRole\x10\n\"j\n\x1f\x43MsgClientToGCSetGuildRoleOrder\x12\x10\n\x08guild_id\x18\x01 \x01(\r\x12\x1a\n\x12requested_role_ids\x18\x02 \x03(\r\x12\x19\n\x11previous_role_ids\x18\x03 \x03(\r\"\xf0\x02\n\'CMsgClientToGCSetGuildRoleOrderResponse\x12Y\n\x06result\x18\x01 \x01(\x0e\x32\x37.dota.CMsgClientToGCSetGuildRoleOrderResponse.EResponse:\x10k_eInternalError\x12\x1a\n\x12\x63onfirmed_role_ids\x18\x02 \x03(\r\"\xcd\x01\n\tEResponse\x12\x14\n\x10k_eInternalError\x10\x00\x12\x0e\n\nk_eSuccess\x10\x01\x12\x0e\n\nk_eTooBusy\x10\x02\x12\x0f\n\x0bk_eDisabled\x10\x03\x12\x0e\n\nk_eTimeout\x10\x04\x12\x13\n\x0fk_eInvalidGuild\x10\x05\x12\x12\n\x0ek_eInvalidRole\x10\x06\x12\x13\n\x0fk_eInvalidOrder\x10\x07\x12\x14\n\x10k_eNoPermissions\x10\x08\x12\x15\n\x11k_eAdminViolation\x10\t\"H\n\x1e\x43MsgClientToGCGuildFeedRequest\x12\x10\n\x08guild_id\x18\x01 \x01(\r\x12\x14\n\x0clast_seen_id\x18\x02 \x01(\x04\"\xd3\x02\n&CMsgClientToGCRequestGuildFeedResponse\x12X\n\x06result\x18\x01 \x01(\x0e\x32\x36.dota.CMsgClientToGCRequestGuildFeedResponse.EResponse:\x10k_eInternalError\x12\x10\n\x08guild_id\x18\x02 \x01(\r\x12-\n\x0b\x66\x65\x65\x64_events\x18\x03 \x03(\x0b\x32\x18.dota.CMsgGuildFeedEvent\"\x8d\x01\n\tEResponse\x12\x14\n\x10k_eInternalError\x10\x00\x12\x0e\n\nk_eSuccess\x10\x01\x12\x0e\n\nk_eTooBusy\x10\x02\x12\x0f\n\x0bk_eDisabled\x10\x03\x12\x0e\n\nk_eTimeout\x10\x04\x12\x13\n\x0fk_eInvalidGuild\x10\x05\x12\x14\n\x10k_eNoPermissions\x10\x06\"2\n\x1e\x43MsgGCToClientGuildFeedUpdated\x12\x10\n\x08guild_id\x18\x01 \x01(\r\"6\n\"CMsgClientToGCAddPlayerToGuildChat\x12\x10\n\x08guild_id\x18\x01 \x01(\r\"\xb2\x02\n*CMsgClientToGCAddPlayerToGuildChatResponse\x12\\\n\x06result\x18\x01 \x01(\x0e\x32:.dota.CMsgClientToGCAddPlayerToGuildChatResponse.EResponse:\x10k_eInternalError\"\xa5\x01\n\tEResponse\x12\x14\n\x10k_eInternalError\x10\x00\x12\x0e\n\nk_eSuccess\x10\x01\x12\x0e\n\nk_eTooBusy\x10\x02\x12\x0f\n\x0bk_eDisabled\x10\x03\x12\x0e\n\nk_eTimeout\x10\x04\x12\x13\n\x0fk_eInvalidGuild\x10\x05\x12\x10\n\x0ck_eNotMember\x10\x06\x12\x1a\n\x16k_eSteamChatNotEnabled\x10\x07\"\xb9\x02\n\x1a\x43MsgFindGuildByTagResponse\x12L\n\x06result\x18\x01 \x01(\x0e\x32*.dota.CMsgFindGuildByTagResponse.EResponse:\x10k_eInternalError\x12\x10\n\x08guild_id\x18\x02 \x01(\r\x12-\n\rguild_summary\x18\x03 \x01(\x0b\x32\x16.dota.CMsgGuildSummary\"\x8b\x01\n\tEResponse\x12\x14\n\x10k_eInternalError\x10\x00\x12\x0e\n\nk_eSuccess\x10\x01\x12\x0e\n\nk_eTooBusy\x10\x02\x12\x0f\n\x0bk_eDisabled\x10\x03\x12\x0e\n\nk_eTimeout\x10\x04\x12\x11\n\rk_eInvalidTag\x10\x05\x12\x14\n\x10k_eGuildNotFound\x10\x06\"\xf5\x02\n\x1f\x43MsgSearchForOpenGuildsResponse\x12Q\n\x06result\x18\x01 \x01(\x0e\x32/.dota.CMsgSearchForOpenGuildsResponse.EResponse:\x10k_eInternalError\x12J\n\x0esearch_results\x18\x02 \x03(\x0b\x32\x32.dota.CMsgSearchForOpenGuildsResponse.SearchResult\x1aO\n\x0cSearchResult\x12\x10\n\x08guild_id\x18\x01 \x01(\r\x12-\n\rguild_summary\x18\x02 \x01(\x0b\x32\x16.dota.CMsgGuildSummary\"b\n\tEResponse\x12\x14\n\x10k_eInternalError\x10\x00\x12\x0e\n\nk_eSuccess\x10\x01\x12\x0e\n\nk_eTooBusy\x10\x02\x12\x0f\n\x0bk_eDisabled\x10\x03\x12\x0e\n\nk_eTimeout\x10\x04\"\xcf\x01\n CMsgClientToGCReportGuildContent\x12\x10\n\x08guild_id\x18\x01 \x01(\r\x12\x1b\n\x13guild_content_flags\x18\x02 \x01(\r\"|\n\rEContentFlags\x12\x0b\n\x07k_eNone\x10\x00\x12\x18\n\x14k_eInappropriateName\x10\x01\x12\x17\n\x13k_eInappropriateTag\x10\x02\x12\x18\n\x14k_eInappropriateLogo\x10\x04\x12\x11\n\rk_eValidFlags\x10\x07\"\x96\x02\n(CMsgClientToGCReportGuildContentResponse\x12Z\n\x06result\x18\x01 \x01(\x0e\x32\x38.dota.CMsgClientToGCReportGuildContentResponse.EResponse:\x10k_eInternalError\"\x8d\x01\n\tEResponse\x12\x14\n\x10k_eInternalError\x10\x00\x12\x0e\n\nk_eSuccess\x10\x01\x12\x0e\n\nk_eTooBusy\x10\x02\x12\x0f\n\x0bk_eDisabled\x10\x03\x12\x0e\n\nk_eTimeout\x10\x04\x12\x14\n\x10k_eGuildNotFound\x10\x05\x12\x13\n\x0fk_eFlagsInvalid\x10\x06\"B\n,CMsgClientToGCRequestAccountGuildPersonaInfo\x12\x12\n\naccount_id\x18\x01 \x01(\r\"\xd3\x02\n4CMsgClientToGCRequestAccountGuildPersonaInfoResponse\x12\x66\n\x06result\x18\x01 \x01(\x0e\x32\x44.dota.CMsgClientToGCRequestAccountGuildPersonaInfoResponse.EResponse:\x10k_eInternalError\x12\x38\n\x0cpersona_info\x18\x02 \x01(\x0b\x32\".dota.CMsgAccountGuildsPersonaInfo\"y\n\tEResponse\x12\x14\n\x10k_eInternalError\x10\x00\x12\x0e\n\nk_eSuccess\x10\x01\x12\x0e\n\nk_eTooBusy\x10\x02\x12\x0f\n\x0bk_eDisabled\x10\x03\x12\x0e\n\nk_eTimeout\x10\x04\x12\x15\n\x11k_eInvalidAccount\x10\x05\"H\n1CMsgClientToGCRequestAccountGuildPersonaInfoBatch\x12\x13\n\x0b\x61\x63\x63ount_ids\x18\x01 \x03(\r\"\xde\x02\n9CMsgClientToGCRequestAccountGuildPersonaInfoBatchResponse\x12k\n\x06result\x18\x01 \x01(\x0e\x32I.dota.CMsgClientToGCRequestAccountGuildPersonaInfoBatchResponse.EResponse:\x10k_eInternalError\x12\x39\n\rpersona_infos\x18\x02 \x03(\x0b\x32\".dota.CMsgAccountGuildsPersonaInfo\"y\n\tEResponse\x12\x14\n\x10k_eInternalError\x10\x00\x12\x0e\n\nk_eSuccess\x10\x01\x12\x0e\n\nk_eTooBusy\x10\x02\x12\x0f\n\x0bk_eDisabled\x10\x03\x12\x0e\n\nk_eTimeout\x10\x04\x12\x15\n\x11k_eInvalidRequest\x10\x05*\xc7\x07\n\x11\x45GuildAuditAction\x12\x1f\n\x1bk_EGuildAuditAction_Invalid\x10\x00\x12$\n k_EGuildAuditAction_GuildCreated\x10\x01\x12,\n(k_EGuildAuditAction_GuildLanguageChanged\x10\x02\x12)\n%k_EGuildAuditAction_GuildFlagsChanged\x10\x03\x12)\n%k_EGuildAuditAction_GuildMemberJoined\x10\x05\x12\'\n#k_EGuildAuditAction_GuildMemberLeft\x10\x06\x12)\n%k_EGuildAuditAction_GuildMemberKicked\x10\x07\x12.\n*k_EGuildAuditAction_GuildMemberRoleChanged\x10\x08\x12(\n$k_EGuildAuditAction_GuildLogoChanged\x10\t\x12*\n&k_EGuildAuditAction_GuildRegionChanged\x10\n\x12/\n+k_EGuildAuditAction_GuildDescriptionChanged\x10\x0b\x12\x30\n,k_EGuildAuditAction_GuildPrimaryColorChanged\x10\x0c\x12\x32\n.k_EGuildAuditAction_GuildSecondaryColorChanged\x10\r\x12+\n\'k_EGuildAuditAction_GuildPatternChanged\x10\x0e\x12(\n$k_EGuildAuditAction_AdminClearedLogo\x10\x0f\x12\x30\n,k_EGuildAuditAction_GuildRequiredRankChanged\x10\x10\x12(\n$k_EGuildAuditAction_GuildMotDChanged\x10\x12\x12&\n\"k_EGuildAuditAction_AdminResetName\x10\x13\x12%\n!k_EGuildAuditAction_AdminResetTag\x10\x14\x12!\n\x1dk_EGuildAuditAction_AdminLock\x10\x15\x12(\n$k_EGuildAuditAction_GuildNameChanged\x10\x16\x12\'\n#k_EGuildAuditAction_GuildTagChanged\x10\x17*p\n\x0e\x45GuildChatType\x12 \n\x1ck_EGuildChatType_Unspecified\x10\x00\x12#\n\x1fk_EGuildChatType_SteamChatGroup\x10\x01\x12\x17\n\x13k_EGuildChatType_GC\x10\x02\x42\x05H\x01\x90\x01\x00'
+  create_key=_descriptor._internal_create_key,
+  serialized_pb=b'\n\"dota_gcmessages_client_guild.proto\x12\x04\x64ota\"\xcb\x03\n\rCMsgGuildInfo\x12\x12\n\nguild_name\x18\x01 \x01(\t\x12\x11\n\tguild_tag\x18\x02 \x01(\t\x12\x19\n\x11\x63reated_timestamp\x18\x03 \x01(\r\x12\x16\n\x0eguild_language\x18\x04 \x01(\r\x12\x13\n\x0bguild_flags\x18\x05 \x01(\r\x12\x12\n\nguild_logo\x18\x07 \x01(\x04\x12\x14\n\x0cguild_region\x18\x08 \x01(\r\x12\x1b\n\x13guild_chat_group_id\x18\t \x01(\x04\x12\x19\n\x11guild_description\x18\n \x01(\t\x12\x1f\n\x17\x64\x65\x66\x61ult_chat_channel_id\x18\x0b \x01(\x04\x12\x1b\n\x13guild_primary_color\x18\x0c \x01(\r\x12\x1d\n\x15guild_secondary_color\x18\r \x01(\r\x12\x15\n\rguild_pattern\x18\x0e \x01(\r\x12!\n\x19guild_refresh_time_offset\x18\x0f \x01(\r\x12 \n\x18guild_required_rank_tier\x18\x10 \x01(\r\x12\x1c\n\x14guild_motd_timestamp\x18\x11 \x01(\r\x12\x12\n\nguild_motd\x18\x12 \x01(\t\"\xb5\x02\n\x10\x43MsgGuildSummary\x12\'\n\nguild_info\x18\x01 \x01(\x0b\x32\x13.dota.CMsgGuildInfo\x12\x14\n\x0cmember_count\x18\x02 \x01(\r\x12\x38\n\x0c\x65vent_points\x18\x03 \x03(\x0b\x32\".dota.CMsgGuildSummary.EventPoints\x1a\xa7\x01\n\x0b\x45ventPoints\x12\x10\n\x08\x65vent_id\x18\x01 \x01(\r\x12\x14\n\x0cguild_points\x18\x02 \x01(\r\x12\x12\n\nguild_rank\x18\x03 \x01(\r\x12\x19\n\x11guild_weekly_rank\x18\x04 \x01(\r\x12\x1f\n\x17guild_weekly_percentile\x18\x05 \x01(\r\x12 \n\x18guild_current_percentile\x18\x06 \x01(\r\"[\n\rCMsgGuildRole\x12\x0f\n\x07role_id\x18\x01 \x01(\r\x12\x11\n\trole_name\x18\x02 \x01(\t\x12\x12\n\nrole_flags\x18\x03 \x01(\r\x12\x12\n\nrole_order\x18\x04 \x01(\r\"\x8b\x01\n\x0f\x43MsgGuildMember\x12\x19\n\x11member_account_id\x18\x01 \x01(\r\x12\x16\n\x0emember_role_id\x18\x02 \x01(\r\x12\x1f\n\x17member_joined_timestamp\x18\x03 \x01(\r\x12$\n\x1cmember_last_active_timestamp\x18\x04 \x01(\r\"b\n\x0f\x43MsgGuildInvite\x12\x1c\n\x14requester_account_id\x18\x01 \x01(\r\x12\x19\n\x11target_account_id\x18\x02 \x01(\r\x12\x16\n\x0etimestamp_sent\x18\x03 \x01(\r\"\xd0\x01\n\rCMsgGuildData\x12\x10\n\x08guild_id\x18\x01 \x01(\r\x12\'\n\nguild_info\x18\x02 \x01(\x0b\x32\x13.dota.CMsgGuildInfo\x12(\n\x0bguild_roles\x18\x03 \x03(\x0b\x32\x13.dota.CMsgGuildRole\x12,\n\rguild_members\x18\x04 \x03(\x0b\x32\x15.dota.CMsgGuildMember\x12,\n\rguild_invites\x18\x05 \x03(\x0b\x32\x15.dota.CMsgGuildInvite\"`\n\x16\x43MsgAccountGuildInvite\x12\x10\n\x08guild_id\x18\x01 \x01(\r\x12\x1c\n\x14requester_account_id\x18\x02 \x01(\r\x12\x16\n\x0etimestamp_sent\x18\x03 \x01(\r\"e\n\x1b\x43MsgAccountGuildMemberships\x12\x11\n\tguild_ids\x18\x01 \x03(\r\x12\x33\n\rguild_invites\x18\x02 \x03(\x0b\x32\x1c.dota.CMsgAccountGuildInvite\"P\n\x14\x43MsgGuildPersonaInfo\x12\x10\n\x08guild_id\x18\x01 \x01(\r\x12\x11\n\tguild_tag\x18\x02 \x01(\t\x12\x13\n\x0bguild_flags\x18\x03 \x01(\r\"W\n\x1c\x43MsgAccountGuildsPersonaInfo\x12\x37\n\x13guild_persona_infos\x18\x01 \x03(\x0b\x32\x1a.dota.CMsgGuildPersonaInfo\"\x94\x01\n\x12\x43MsgGuildFeedEvent\x12\x15\n\rfeed_event_id\x18\x01 \x01(\x04\x12\x11\n\ttimestamp\x18\x02 \x01(\r\x12\x12\n\nevent_type\x18\x03 \x01(\r\x12\x14\n\x0cparam_uint_1\x18\x04 \x01(\r\x12\x14\n\x0cparam_uint_2\x18\x05 \x01(\r\x12\x14\n\x0cparam_uint_3\x18\x06 \x01(\r\"\x91\x01\n\x19\x43MsgClientToGCCreateGuild\x12\'\n\nguild_info\x18\x01 \x01(\x0b\x32\x13.dota.CMsgGuildInfo\x12K\n\x0fguild_chat_type\x18\x02 \x01(\x0e\x32\x14.dota.EGuildChatType:\x1ck_EGuildChatType_Unspecified\"\xd9\x03\n!CMsgClientToGCCreateGuildResponse\x12S\n\x06result\x18\x01 \x01(\x0e\x32\x31.dota.CMsgClientToGCCreateGuildResponse.EResponse:\x10k_eInternalError\x12\x10\n\x08guild_id\x18\x02 \x01(\r\"\xcc\x02\n\tEResponse\x12\x14\n\x10k_eInternalError\x10\x00\x12\x0e\n\nk_eSuccess\x10\x01\x12\x0e\n\nk_eTooBusy\x10\x02\x12\x0f\n\x0bk_eDisabled\x10\x03\x12\x0e\n\nk_eTimeout\x10\x04\x12\x12\n\x0ek_eInvalidName\x10\x05\x12\x16\n\x12k_eNameAlreadyUsed\x10\x06\x12\x11\n\rk_eInvalidTag\x10\x07\x12\x15\n\x11k_eTagAlreadyUsed\x10\x08\x12\x19\n\x15k_eInvalidDescription\x10\t\x12\x14\n\x10k_eInvalidRegion\x10\n\x12\x12\n\x0ek_eInvalidLogo\x10\x0b\x12\x16\n\x12k_eDoesNotOwnEvent\x10\x0c\x12\x11\n\rk_eGuildLimit\x10\r\x12\x12\n\x0ek_eInvalidMotD\x10\x0e\x12\x0e\n\nk_eBlocked\x10\x0f\"\xa4\x01\n\x1a\x43MsgClientToGCSetGuildInfo\x12\x10\n\x08guild_id\x18\x01 \x01(\r\x12\'\n\nguild_info\x18\x02 \x01(\x0b\x32\x13.dota.CMsgGuildInfo\x12K\n\x0fguild_chat_type\x18\x03 \x01(\x0e\x32\x14.dota.EGuildChatType:\x1ck_EGuildChatType_Unspecified\"\xc0\x03\n\"CMsgClientToGCSetGuildInfoResponse\x12T\n\x06result\x18\x01 \x01(\x0e\x32\x32.dota.CMsgClientToGCSetGuildInfoResponse.EResponse:\x10k_eInternalError\"\xc3\x02\n\tEResponse\x12\x14\n\x10k_eInternalError\x10\x00\x12\x0e\n\nk_eSuccess\x10\x01\x12\x0e\n\nk_eTooBusy\x10\x02\x12\x0f\n\x0bk_eDisabled\x10\x03\x12\x0e\n\nk_eTimeout\x10\x04\x12\x13\n\x0fk_eInvalidGuild\x10\x05\x12\x10\n\x0ck_eNotMember\x10\x06\x12\x13\n\x0fk_eNoPermission\x10\x07\x12\x12\n\x0ek_eMotDTooLong\x10\x08\x12\x1e\n\x1ak_eNameChangeNoPermissions\x10\t\x12\x1d\n\x19k_eTagChangeNoPermissions\x10\n\x12\x12\n\x0ek_eNameInvalid\x10\x0b\x12\x11\n\rk_eTagInvalid\x10\x0c\x12\x19\n\x15k_eDescriptionInvalid\x10\r\x12\x0e\n\nk_eBlocked\x10\x0e\"2\n\x1e\x43MsgClientToGCRequestGuildData\x12\x10\n\x08guild_id\x18\x01 \x01(\r\"\xb7\x02\n&CMsgClientToGCRequestGuildDataResponse\x12X\n\x06result\x18\x01 \x01(\x0e\x32\x36.dota.CMsgClientToGCRequestGuildDataResponse.EResponse:\x10k_eInternalError\x12\'\n\nguild_data\x18\x02 \x01(\x0b\x32\x13.dota.CMsgGuildData\"\x89\x01\n\tEResponse\x12\x14\n\x10k_eInternalError\x10\x00\x12\x0e\n\nk_eSuccess\x10\x01\x12\x0e\n\nk_eTooBusy\x10\x02\x12\x0f\n\x0bk_eDisabled\x10\x03\x12\x0e\n\nk_eTimeout\x10\x04\x12\x13\n\x0fk_eInvalidGuild\x10\x05\x12\x10\n\x0ck_eNotMember\x10\x06\"_\n\x1e\x43MsgGCToClientGuildDataUpdated\x12\'\n\nguild_data\x18\x01 \x01(\x0b\x32\x13.dota.CMsgGuildData\x12\x14\n\x0cupdate_flags\x18\x02 \x01(\r\"f\n%CMsgGCToClientGuildMembersDataUpdated\x12\x10\n\x08guild_id\x18\x01 \x01(\r\x12+\n\x0cmembers_data\x18\x02 \x03(\x0b\x32\x15.dota.CMsgGuildMember\"&\n$CMsgClientToGCRequestGuildMembership\"\xb0\x02\n,CMsgClientToGCRequestGuildMembershipResponse\x12^\n\x06result\x18\x01 \x01(\x0e\x32<.dota.CMsgClientToGCRequestGuildMembershipResponse.EResponse:\x10k_eInternalError\x12<\n\x11guild_memberships\x18\x02 \x01(\x0b\x32!.dota.CMsgAccountGuildMemberships\"b\n\tEResponse\x12\x14\n\x10k_eInternalError\x10\x00\x12\x0e\n\nk_eSuccess\x10\x01\x12\x0e\n\nk_eTooBusy\x10\x02\x12\x0f\n\x0bk_eDisabled\x10\x03\x12\x0e\n\nk_eTimeout\x10\x04\"d\n$CMsgGCToClientGuildMembershipUpdated\x12<\n\x11guild_memberships\x18\x01 \x01(\x0b\x32!.dota.CMsgAccountGuildMemberships\"5\n!CMsgClientToGCRequestGuildSummary\x12\x10\n\x08guild_id\x18\x01 \x01(\r\"\xb0\x02\n)CMsgClientToGCRequestGuildSummaryResponse\x12[\n\x06result\x18\x01 \x01(\x0e\x32\x39.dota.CMsgClientToGCRequestGuildSummaryResponse.EResponse:\x10k_eInternalError\x12-\n\rguild_summary\x18\x02 \x01(\x0b\x32\x16.dota.CMsgGuildSummary\"w\n\tEResponse\x12\x14\n\x10k_eInternalError\x10\x00\x12\x0e\n\nk_eSuccess\x10\x01\x12\x0e\n\nk_eTooBusy\x10\x02\x12\x0f\n\x0bk_eDisabled\x10\x03\x12\x0e\n\nk_eTimeout\x10\x04\x12\x13\n\x0fk_eInvalidGuild\x10\x05\"+\n\x17\x43MsgClientToGCJoinGuild\x12\x10\n\x08guild_id\x18\x01 \x01(\r\"\xdd\x02\n\x1f\x43MsgClientToGCJoinGuildResponse\x12Q\n\x06result\x18\x01 \x01(\x0e\x32/.dota.CMsgClientToGCJoinGuildResponse.EResponse:\x10k_eInternalError\"\xe6\x01\n\tEResponse\x12\x14\n\x10k_eInternalError\x10\x00\x12\x0e\n\nk_eSuccess\x10\x01\x12\x0e\n\nk_eTooBusy\x10\x02\x12\x0f\n\x0bk_eDisabled\x10\x03\x12\x0e\n\nk_eTimeout\x10\x04\x12\x13\n\x0fk_eInvalidGuild\x10\x05\x12\x10\n\x0ck_eGuildFull\x10\x06\x12\x14\n\x10k_eAlreadyMember\x10\x07\x12\x11\n\rk_eGuildLimit\x10\x08\x12\x1a\n\x16k_eGuildRequiresInvite\x10\t\x12\x16\n\x12k_eGuildRankTooLow\x10\n\",\n\x18\x43MsgClientToGCLeaveGuild\x12\x10\n\x08guild_id\x18\x01 \x01(\r\"\x94\x02\n CMsgClientToGCLeaveGuildResponse\x12R\n\x06result\x18\x01 \x01(\x0e\x32\x30.dota.CMsgClientToGCLeaveGuildResponse.EResponse:\x10k_eInternalError\"\x9b\x01\n\tEResponse\x12\x14\n\x10k_eInternalError\x10\x00\x12\x0e\n\nk_eSuccess\x10\x01\x12\x0e\n\nk_eTooBusy\x10\x02\x12\x0f\n\x0bk_eDisabled\x10\x03\x12\x0e\n\nk_eTimeout\x10\x04\x12\x13\n\x0fk_eInvalidGuild\x10\x05\x12\x10\n\x0ck_eNotMember\x10\x06\x12\x10\n\x0ck_eLastAdmin\x10\x07\"L\n\x1d\x43MsgClientToGCKickGuildMember\x12\x10\n\x08guild_id\x18\x01 \x01(\r\x12\x19\n\x11target_account_id\x18\x02 \x01(\r\"\xd7\x02\n%CMsgClientToGCKickGuildMemberResponse\x12W\n\x06result\x18\x01 \x01(\x0e\x32\x35.dota.CMsgClientToGCKickGuildMemberResponse.EResponse:\x10k_eInternalError\"\xd4\x01\n\tEResponse\x12\x14\n\x10k_eInternalError\x10\x00\x12\x0e\n\nk_eSuccess\x10\x01\x12\x0e\n\nk_eTooBusy\x10\x02\x12\x0f\n\x0bk_eDisabled\x10\x03\x12\x0e\n\nk_eTimeout\x10\x04\x12\x13\n\x0fk_eInvalidGuild\x10\x05\x12\x19\n\x15k_eRequesterNotMember\x10\x06\x12\x16\n\x12k_eTargetNotMember\x10\x07\x12\x13\n\x0fk_eNoPermission\x10\x08\x12\x13\n\x0fk_eCantKickSelf\x10\t\"g\n CMsgClientToGCSetGuildMemberRole\x12\x10\n\x08guild_id\x18\x01 \x01(\r\x12\x19\n\x11target_account_id\x18\x02 \x01(\r\x12\x16\n\x0etarget_role_id\x18\x03 \x01(\r\"\xf3\x02\n(CMsgClientToGCSetGuildMemberRoleResponse\x12Z\n\x06result\x18\x01 \x01(\x0e\x32\x38.dota.CMsgClientToGCSetGuildMemberRoleResponse.EResponse:\x10k_eInternalError\"\xea\x01\n\tEResponse\x12\x14\n\x10k_eInternalError\x10\x00\x12\x0e\n\nk_eSuccess\x10\x01\x12\x0e\n\nk_eTooBusy\x10\x02\x12\x0f\n\x0bk_eDisabled\x10\x03\x12\x0e\n\nk_eTimeout\x10\x04\x12\x13\n\x0fk_eInvalidGuild\x10\x05\x12\x19\n\x15k_eRequesterNotMember\x10\x06\x12\x16\n\x12k_eTargetNotMember\x10\x07\x12\x13\n\x0fk_eNoPermission\x10\x08\x12\x12\n\x0ek_eInvalidRole\x10\t\x12\x15\n\x11k_eAdminViolation\x10\n\"J\n\x1b\x43MsgClientToGCInviteToGuild\x12\x10\n\x08guild_id\x18\x01 \x01(\r\x12\x19\n\x11target_account_id\x18\x02 \x01(\r\"\x84\x03\n#CMsgClientToGCInviteToGuildResponse\x12U\n\x06result\x18\x01 \x01(\x0e\x32\x33.dota.CMsgClientToGCInviteToGuildResponse.EResponse:\x10k_eInternalError\"\x85\x02\n\tEResponse\x12\x14\n\x10k_eInternalError\x10\x00\x12\x0e\n\nk_eSuccess\x10\x01\x12\x0e\n\nk_eTooBusy\x10\x02\x12\x0f\n\x0bk_eDisabled\x10\x03\x12\x0e\n\nk_eTimeout\x10\x04\x12\x13\n\x0fk_eInvalidGuild\x10\x05\x12\x10\n\x0ck_eGuildFull\x10\x06\x12\x19\n\x15k_eRequesterNotMember\x10\x07\x12\x15\n\x11k_eAlreadyAMember\x10\x08\x12\x15\n\x11k_eAlreadyInvited\x10\t\x12\x1a\n\x16k_eNoInvitePermissions\x10\n\x12\x15\n\x11k_eTooManyInvites\x10\x0b\"6\n\"CMsgClientToGCDeclineInviteToGuild\x12\x10\n\x08guild_id\x18\x01 \x01(\r\"\x9a\x02\n*CMsgClientToGCDeclineInviteToGuildResponse\x12\\\n\x06result\x18\x01 \x01(\x0e\x32:.dota.CMsgClientToGCDeclineInviteToGuildResponse.EResponse:\x10k_eInternalError\"\x8d\x01\n\tEResponse\x12\x14\n\x10k_eInternalError\x10\x00\x12\x0e\n\nk_eSuccess\x10\x01\x12\x0e\n\nk_eTooBusy\x10\x02\x12\x0f\n\x0bk_eDisabled\x10\x03\x12\x0e\n\nk_eTimeout\x10\x04\x12\x13\n\x0fk_eInvalidGuild\x10\x05\x12\x14\n\x10k_eNoInviteFound\x10\x06\"5\n!CMsgClientToGCAcceptInviteToGuild\x12\x10\n\x08guild_id\x18\x01 \x01(\r\"\xeb\x02\n)CMsgClientToGCAcceptInviteToGuildResponse\x12[\n\x06result\x18\x01 \x01(\x0e\x32\x39.dota.CMsgClientToGCAcceptInviteToGuildResponse.EResponse:\x10k_eInternalError\"\xe0\x01\n\tEResponse\x12\x14\n\x10k_eInternalError\x10\x00\x12\x0e\n\nk_eSuccess\x10\x01\x12\x0e\n\nk_eTooBusy\x10\x02\x12\x0f\n\x0bk_eDisabled\x10\x03\x12\x0e\n\nk_eTimeout\x10\x04\x12\x13\n\x0fk_eInvalidGuild\x10\x05\x12\x14\n\x10k_eNoInviteFound\x10\x06\x12\x10\n\x0ck_eGuildFull\x10\x07\x12\x11\n\rk_eGuildLimit\x10\x08\x12\x15\n\x11k_eInvalidInviter\x10\t\x12\x15\n\x11k_eAlreadyInGuild\x10\n\"P\n!CMsgClientToGCCancelInviteToGuild\x12\x10\n\x08guild_id\x18\x01 \x01(\r\x12\x19\n\x11target_account_id\x18\x02 \x01(\r\"\xae\x02\n)CMsgClientToGCCancelInviteToGuildResponse\x12[\n\x06result\x18\x01 \x01(\x0e\x32\x39.dota.CMsgClientToGCCancelInviteToGuildResponse.EResponse:\x10k_eInternalError\"\xa3\x01\n\tEResponse\x12\x14\n\x10k_eInternalError\x10\x00\x12\x0e\n\nk_eSuccess\x10\x01\x12\x0e\n\nk_eTooBusy\x10\x02\x12\x0f\n\x0bk_eDisabled\x10\x03\x12\x0e\n\nk_eTimeout\x10\x04\x12\x13\n\x0fk_eInvalidGuild\x10\x05\x12\x14\n\x10k_eNoInviteFound\x10\x06\x12\x14\n\x10k_eNoPermissions\x10\x07\"U\n\x1a\x43MsgClientToGCAddGuildRole\x12\x10\n\x08guild_id\x18\x01 \x01(\r\x12\x11\n\trole_name\x18\x02 \x01(\t\x12\x12\n\nrole_flags\x18\x03 \x01(\r\"\x98\x03\n\"CMsgClientToGCAddGuildRoleResponse\x12T\n\x06result\x18\x01 \x01(\x0e\x32\x32.dota.CMsgClientToGCAddGuildRoleResponse.EResponse:\x10k_eInternalError\x12\x0f\n\x07role_id\x18\x02 \x01(\r\"\x8a\x02\n\tEResponse\x12\x14\n\x10k_eInternalError\x10\x00\x12\x0e\n\nk_eSuccess\x10\x01\x12\x0e\n\nk_eTooBusy\x10\x02\x12\x0f\n\x0bk_eDisabled\x10\x03\x12\x0e\n\nk_eTimeout\x10\x04\x12\x13\n\x0fk_eInvalidGuild\x10\x05\x12\x16\n\x12k_eNameAlreadyUsed\x10\x06\x12\x14\n\x10k_eNoPermissions\x10\x07\x12\x13\n\x0fk_eInvalidFlags\x10\x08\x12\x12\n\x0ek_eInvalidName\x10\t\x12\x15\n\x11k_eAdminViolation\x10\n\x12\x13\n\x0fk_eTooManyRoles\x10\x0b\x12\x0e\n\nk_eBlocked\x10\x0c\"i\n\x1d\x43MsgClientToGCModifyGuildRole\x12\x10\n\x08guild_id\x18\x01 \x01(\r\x12\x0f\n\x07role_id\x18\x02 \x01(\r\x12\x11\n\trole_name\x18\x03 \x01(\t\x12\x12\n\nrole_flags\x18\x04 \x01(\r\"\x8c\x03\n%CMsgClientToGCModifyGuildRoleResponse\x12W\n\x06result\x18\x01 \x01(\x0e\x32\x35.dota.CMsgClientToGCModifyGuildRoleResponse.EResponse:\x10k_eInternalError\"\x89\x02\n\tEResponse\x12\x14\n\x10k_eInternalError\x10\x00\x12\x0e\n\nk_eSuccess\x10\x01\x12\x0e\n\nk_eTooBusy\x10\x02\x12\x0f\n\x0bk_eDisabled\x10\x03\x12\x0e\n\nk_eTimeout\x10\x04\x12\x13\n\x0fk_eInvalidGuild\x10\x05\x12\x12\n\x0ek_eInvalidRole\x10\x06\x12\x16\n\x12k_eNameAlreadyUsed\x10\x07\x12\x13\n\x0fk_eInvalidFlags\x10\x08\x12\x12\n\x0ek_eInvalidName\x10\t\x12\x14\n\x10k_eNoPermissions\x10\n\x12\x15\n\x11k_eAdminViolation\x10\x0b\x12\x0e\n\nk_eBlocked\x10\x0c\"B\n\x1d\x43MsgClientToGCRemoveGuildRole\x12\x10\n\x08guild_id\x18\x01 \x01(\r\x12\x0f\n\x07role_id\x18\x02 \x01(\r\"\xee\x02\n%CMsgClientToGCRemoveGuildRoleResponse\x12W\n\x06result\x18\x01 \x01(\x0e\x32\x35.dota.CMsgClientToGCRemoveGuildRoleResponse.EResponse:\x10k_eInternalError\"\xeb\x01\n\tEResponse\x12\x14\n\x10k_eInternalError\x10\x00\x12\x0e\n\nk_eSuccess\x10\x01\x12\x0e\n\nk_eTooBusy\x10\x02\x12\x0f\n\x0bk_eDisabled\x10\x03\x12\x0e\n\nk_eTimeout\x10\x04\x12\x13\n\x0fk_eInvalidGuild\x10\x05\x12\x12\n\x0ek_eInvalidRole\x10\x06\x12\x13\n\x0fk_eRoleNotEmpty\x10\x07\x12\x14\n\x10k_eNoPermissions\x10\x08\x12\x15\n\x11k_eAdminViolation\x10\t\x12\x1c\n\x18k_eCantRemoveDefaultRole\x10\n\"j\n\x1f\x43MsgClientToGCSetGuildRoleOrder\x12\x10\n\x08guild_id\x18\x01 \x01(\r\x12\x1a\n\x12requested_role_ids\x18\x02 \x03(\r\x12\x19\n\x11previous_role_ids\x18\x03 \x03(\r\"\xf0\x02\n\'CMsgClientToGCSetGuildRoleOrderResponse\x12Y\n\x06result\x18\x01 \x01(\x0e\x32\x37.dota.CMsgClientToGCSetGuildRoleOrderResponse.EResponse:\x10k_eInternalError\x12\x1a\n\x12\x63onfirmed_role_ids\x18\x02 \x03(\r\"\xcd\x01\n\tEResponse\x12\x14\n\x10k_eInternalError\x10\x00\x12\x0e\n\nk_eSuccess\x10\x01\x12\x0e\n\nk_eTooBusy\x10\x02\x12\x0f\n\x0bk_eDisabled\x10\x03\x12\x0e\n\nk_eTimeout\x10\x04\x12\x13\n\x0fk_eInvalidGuild\x10\x05\x12\x12\n\x0ek_eInvalidRole\x10\x06\x12\x13\n\x0fk_eInvalidOrder\x10\x07\x12\x14\n\x10k_eNoPermissions\x10\x08\x12\x15\n\x11k_eAdminViolation\x10\t\"H\n\x1e\x43MsgClientToGCGuildFeedRequest\x12\x10\n\x08guild_id\x18\x01 \x01(\r\x12\x14\n\x0clast_seen_id\x18\x02 \x01(\x04\"\xd3\x02\n&CMsgClientToGCRequestGuildFeedResponse\x12X\n\x06result\x18\x01 \x01(\x0e\x32\x36.dota.CMsgClientToGCRequestGuildFeedResponse.EResponse:\x10k_eInternalError\x12\x10\n\x08guild_id\x18\x02 \x01(\r\x12-\n\x0b\x66\x65\x65\x64_events\x18\x03 \x03(\x0b\x32\x18.dota.CMsgGuildFeedEvent\"\x8d\x01\n\tEResponse\x12\x14\n\x10k_eInternalError\x10\x00\x12\x0e\n\nk_eSuccess\x10\x01\x12\x0e\n\nk_eTooBusy\x10\x02\x12\x0f\n\x0bk_eDisabled\x10\x03\x12\x0e\n\nk_eTimeout\x10\x04\x12\x13\n\x0fk_eInvalidGuild\x10\x05\x12\x14\n\x10k_eNoPermissions\x10\x06\"2\n\x1e\x43MsgGCToClientGuildFeedUpdated\x12\x10\n\x08guild_id\x18\x01 \x01(\r\"6\n\"CMsgClientToGCAddPlayerToGuildChat\x12\x10\n\x08guild_id\x18\x01 \x01(\r\"\xb2\x02\n*CMsgClientToGCAddPlayerToGuildChatResponse\x12\\\n\x06result\x18\x01 \x01(\x0e\x32:.dota.CMsgClientToGCAddPlayerToGuildChatResponse.EResponse:\x10k_eInternalError\"\xa5\x01\n\tEResponse\x12\x14\n\x10k_eInternalError\x10\x00\x12\x0e\n\nk_eSuccess\x10\x01\x12\x0e\n\nk_eTooBusy\x10\x02\x12\x0f\n\x0bk_eDisabled\x10\x03\x12\x0e\n\nk_eTimeout\x10\x04\x12\x13\n\x0fk_eInvalidGuild\x10\x05\x12\x10\n\x0ck_eNotMember\x10\x06\x12\x1a\n\x16k_eSteamChatNotEnabled\x10\x07\"\xb9\x02\n\x1a\x43MsgFindGuildByTagResponse\x12L\n\x06result\x18\x01 \x01(\x0e\x32*.dota.CMsgFindGuildByTagResponse.EResponse:\x10k_eInternalError\x12\x10\n\x08guild_id\x18\x02 \x01(\r\x12-\n\rguild_summary\x18\x03 \x01(\x0b\x32\x16.dota.CMsgGuildSummary\"\x8b\x01\n\tEResponse\x12\x14\n\x10k_eInternalError\x10\x00\x12\x0e\n\nk_eSuccess\x10\x01\x12\x0e\n\nk_eTooBusy\x10\x02\x12\x0f\n\x0bk_eDisabled\x10\x03\x12\x0e\n\nk_eTimeout\x10\x04\x12\x11\n\rk_eInvalidTag\x10\x05\x12\x14\n\x10k_eGuildNotFound\x10\x06\"\x8c\x03\n\x1f\x43MsgSearchForOpenGuildsResponse\x12Q\n\x06result\x18\x01 \x01(\x0e\x32/.dota.CMsgSearchForOpenGuildsResponse.EResponse:\x10k_eInternalError\x12J\n\x0esearch_results\x18\x02 \x03(\x0b\x32\x32.dota.CMsgSearchForOpenGuildsResponse.SearchResult\x12\x15\n\ruse_whitelist\x18\x03 \x01(\x08\x1aO\n\x0cSearchResult\x12\x10\n\x08guild_id\x18\x01 \x01(\r\x12-\n\rguild_summary\x18\x02 \x01(\x0b\x32\x16.dota.CMsgGuildSummary\"b\n\tEResponse\x12\x14\n\x10k_eInternalError\x10\x00\x12\x0e\n\nk_eSuccess\x10\x01\x12\x0e\n\nk_eTooBusy\x10\x02\x12\x0f\n\x0bk_eDisabled\x10\x03\x12\x0e\n\nk_eTimeout\x10\x04\"\xcf\x01\n CMsgClientToGCReportGuildContent\x12\x10\n\x08guild_id\x18\x01 \x01(\r\x12\x1b\n\x13guild_content_flags\x18\x02 \x01(\r\"|\n\rEContentFlags\x12\x0b\n\x07k_eNone\x10\x00\x12\x18\n\x14k_eInappropriateName\x10\x01\x12\x17\n\x13k_eInappropriateTag\x10\x02\x12\x18\n\x14k_eInappropriateLogo\x10\x04\x12\x11\n\rk_eValidFlags\x10\x07\"\x96\x02\n(CMsgClientToGCReportGuildContentResponse\x12Z\n\x06result\x18\x01 \x01(\x0e\x32\x38.dota.CMsgClientToGCReportGuildContentResponse.EResponse:\x10k_eInternalError\"\x8d\x01\n\tEResponse\x12\x14\n\x10k_eInternalError\x10\x00\x12\x0e\n\nk_eSuccess\x10\x01\x12\x0e\n\nk_eTooBusy\x10\x02\x12\x0f\n\x0bk_eDisabled\x10\x03\x12\x0e\n\nk_eTimeout\x10\x04\x12\x14\n\x10k_eGuildNotFound\x10\x05\x12\x13\n\x0fk_eFlagsInvalid\x10\x06\"B\n,CMsgClientToGCRequestAccountGuildPersonaInfo\x12\x12\n\naccount_id\x18\x01 \x01(\r\"\xd3\x02\n4CMsgClientToGCRequestAccountGuildPersonaInfoResponse\x12\x66\n\x06result\x18\x01 \x01(\x0e\x32\x44.dota.CMsgClientToGCRequestAccountGuildPersonaInfoResponse.EResponse:\x10k_eInternalError\x12\x38\n\x0cpersona_info\x18\x02 \x01(\x0b\x32\".dota.CMsgAccountGuildsPersonaInfo\"y\n\tEResponse\x12\x14\n\x10k_eInternalError\x10\x00\x12\x0e\n\nk_eSuccess\x10\x01\x12\x0e\n\nk_eTooBusy\x10\x02\x12\x0f\n\x0bk_eDisabled\x10\x03\x12\x0e\n\nk_eTimeout\x10\x04\x12\x15\n\x11k_eInvalidAccount\x10\x05\"H\n1CMsgClientToGCRequestAccountGuildPersonaInfoBatch\x12\x13\n\x0b\x61\x63\x63ount_ids\x18\x01 \x03(\r\"\xde\x02\n9CMsgClientToGCRequestAccountGuildPersonaInfoBatchResponse\x12k\n\x06result\x18\x01 \x01(\x0e\x32I.dota.CMsgClientToGCRequestAccountGuildPersonaInfoBatchResponse.EResponse:\x10k_eInternalError\x12\x39\n\rpersona_infos\x18\x02 \x03(\x0b\x32\".dota.CMsgAccountGuildsPersonaInfo\"y\n\tEResponse\x12\x14\n\x10k_eInternalError\x10\x00\x12\x0e\n\nk_eSuccess\x10\x01\x12\x0e\n\nk_eTooBusy\x10\x02\x12\x0f\n\x0bk_eDisabled\x10\x03\x12\x0e\n\nk_eTimeout\x10\x04\x12\x15\n\x11k_eInvalidRequest\x10\x05*\xbe\x08\n\x11\x45GuildAuditAction\x12\x1f\n\x1bk_EGuildAuditAction_Invalid\x10\x00\x12$\n k_EGuildAuditAction_GuildCreated\x10\x01\x12,\n(k_EGuildAuditAction_GuildLanguageChanged\x10\x02\x12)\n%k_EGuildAuditAction_GuildFlagsChanged\x10\x03\x12)\n%k_EGuildAuditAction_GuildMemberJoined\x10\x05\x12\'\n#k_EGuildAuditAction_GuildMemberLeft\x10\x06\x12)\n%k_EGuildAuditAction_GuildMemberKicked\x10\x07\x12.\n*k_EGuildAuditAction_GuildMemberRoleChanged\x10\x08\x12(\n$k_EGuildAuditAction_GuildLogoChanged\x10\t\x12*\n&k_EGuildAuditAction_GuildRegionChanged\x10\n\x12/\n+k_EGuildAuditAction_GuildDescriptionChanged\x10\x0b\x12\x30\n,k_EGuildAuditAction_GuildPrimaryColorChanged\x10\x0c\x12\x32\n.k_EGuildAuditAction_GuildSecondaryColorChanged\x10\r\x12+\n\'k_EGuildAuditAction_GuildPatternChanged\x10\x0e\x12(\n$k_EGuildAuditAction_AdminClearedLogo\x10\x0f\x12\x30\n,k_EGuildAuditAction_GuildRequiredRankChanged\x10\x10\x12(\n$k_EGuildAuditAction_GuildMotDChanged\x10\x12\x12&\n\"k_EGuildAuditAction_AdminResetName\x10\x13\x12%\n!k_EGuildAuditAction_AdminResetTag\x10\x14\x12!\n\x1dk_EGuildAuditAction_AdminLock\x10\x15\x12(\n$k_EGuildAuditAction_GuildNameChanged\x10\x16\x12\'\n#k_EGuildAuditAction_GuildTagChanged\x10\x17\x12&\n\"k_EGuildAuditAction_AdminPermitted\x10\x18\x12$\n k_EGuildAuditAction_AdminBlocked\x10\x19\x12\'\n#k_EGuildAuditAction_AdminBannedUser\x10\x1a*p\n\x0e\x45GuildChatType\x12 \n\x1ck_EGuildChatType_Unspecified\x10\x00\x12#\n\x1fk_EGuildChatType_SteamChatGroup\x10\x01\x12\x17\n\x13k_EGuildChatType_GC\x10\x02\x42\x05H\x01\x90\x01\x00'
 )
 
 _EGUILDAUDITACTION = _descriptor.EnumDescriptor(
@@ -27,100 +28,138 @@ _EGUILDAUDITACTION = _descriptor.EnumDescriptor(
   full_name='dota.EGuildAuditAction',
   filename=None,
   file=DESCRIPTOR,
+  create_key=_descriptor._internal_create_key,
   values=[
     _descriptor.EnumValueDescriptor(
       name='k_EGuildAuditAction_Invalid', index=0, number=0,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
       name='k_EGuildAuditAction_GuildCreated', index=1, number=1,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
       name='k_EGuildAuditAction_GuildLanguageChanged', index=2, number=2,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
       name='k_EGuildAuditAction_GuildFlagsChanged', index=3, number=3,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
       name='k_EGuildAuditAction_GuildMemberJoined', index=4, number=5,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
       name='k_EGuildAuditAction_GuildMemberLeft', index=5, number=6,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
       name='k_EGuildAuditAction_GuildMemberKicked', index=6, number=7,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
       name='k_EGuildAuditAction_GuildMemberRoleChanged', index=7, number=8,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
       name='k_EGuildAuditAction_GuildLogoChanged', index=8, number=9,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
       name='k_EGuildAuditAction_GuildRegionChanged', index=9, number=10,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
       name='k_EGuildAuditAction_GuildDescriptionChanged', index=10, number=11,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
       name='k_EGuildAuditAction_GuildPrimaryColorChanged', index=11, number=12,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
       name='k_EGuildAuditAction_GuildSecondaryColorChanged', index=12, number=13,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
       name='k_EGuildAuditAction_GuildPatternChanged', index=13, number=14,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
       name='k_EGuildAuditAction_AdminClearedLogo', index=14, number=15,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
       name='k_EGuildAuditAction_GuildRequiredRankChanged', index=15, number=16,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
       name='k_EGuildAuditAction_GuildMotDChanged', index=16, number=18,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
       name='k_EGuildAuditAction_AdminResetName', index=17, number=19,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
       name='k_EGuildAuditAction_AdminResetTag', index=18, number=20,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
       name='k_EGuildAuditAction_AdminLock', index=19, number=21,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
       name='k_EGuildAuditAction_GuildNameChanged', index=20, number=22,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
       name='k_EGuildAuditAction_GuildTagChanged', index=21, number=23,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='k_EGuildAuditAction_AdminPermitted', index=22, number=24,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='k_EGuildAuditAction_AdminBlocked', index=23, number=25,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='k_EGuildAuditAction_AdminBannedUser', index=24, number=26,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=12179,
-  serialized_end=13146,
+  serialized_start=12545,
+  serialized_end=13631,
 )
 _sym_db.RegisterEnumDescriptor(_EGUILDAUDITACTION)
 
@@ -130,24 +169,28 @@ _EGUILDCHATTYPE = _descriptor.EnumDescriptor(
   full_name='dota.EGuildChatType',
   filename=None,
   file=DESCRIPTOR,
+  create_key=_descriptor._internal_create_key,
   values=[
     _descriptor.EnumValueDescriptor(
       name='k_EGuildChatType_Unspecified', index=0, number=0,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
       name='k_EGuildChatType_SteamChatGroup', index=1, number=1,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
       name='k_EGuildChatType_GC', index=2, number=2,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=13148,
-  serialized_end=13260,
+  serialized_start=13633,
+  serialized_end=13745,
 )
 _sym_db.RegisterEnumDescriptor(_EGUILDCHATTYPE)
 
@@ -174,6 +217,9 @@ k_EGuildAuditAction_AdminResetTag = 20
 k_EGuildAuditAction_AdminLock = 21
 k_EGuildAuditAction_GuildNameChanged = 22
 k_EGuildAuditAction_GuildTagChanged = 23
+k_EGuildAuditAction_AdminPermitted = 24
+k_EGuildAuditAction_AdminBlocked = 25
+k_EGuildAuditAction_AdminBannedUser = 26
 k_EGuildChatType_Unspecified = 0
 k_EGuildChatType_SteamChatGroup = 1
 k_EGuildChatType_GC = 2
@@ -184,72 +230,93 @@ _CMSGCLIENTTOGCCREATEGUILDRESPONSE_ERESPONSE = _descriptor.EnumDescriptor(
   full_name='dota.CMsgClientToGCCreateGuildResponse.EResponse',
   filename=None,
   file=DESCRIPTOR,
+  create_key=_descriptor._internal_create_key,
   values=[
     _descriptor.EnumValueDescriptor(
       name='k_eInternalError', index=0, number=0,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
       name='k_eSuccess', index=1, number=1,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
       name='k_eTooBusy', index=2, number=2,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
       name='k_eDisabled', index=3, number=3,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
       name='k_eTimeout', index=4, number=4,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
       name='k_eInvalidName', index=5, number=5,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
       name='k_eNameAlreadyUsed', index=6, number=6,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
       name='k_eInvalidTag', index=7, number=7,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
       name='k_eTagAlreadyUsed', index=8, number=8,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
       name='k_eInvalidDescription', index=9, number=9,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
       name='k_eInvalidRegion', index=10, number=10,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
       name='k_eInvalidLogo', index=11, number=11,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
       name='k_eDoesNotOwnEvent', index=12, number=12,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
       name='k_eGuildLimit', index=13, number=13,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
       name='k_eInvalidMotD', index=14, number=14,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='k_eBlocked', index=15, number=15,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=2002,
-  serialized_end=2318,
+  serialized_start=2177,
+  serialized_end=2509,
 )
 _sym_db.RegisterEnumDescriptor(_CMSGCLIENTTOGCCREATEGUILDRESPONSE_ERESPONSE)
 
@@ -258,68 +325,88 @@ _CMSGCLIENTTOGCSETGUILDINFORESPONSE_ERESPONSE = _descriptor.EnumDescriptor(
   full_name='dota.CMsgClientToGCSetGuildInfoResponse.EResponse',
   filename=None,
   file=DESCRIPTOR,
+  create_key=_descriptor._internal_create_key,
   values=[
     _descriptor.EnumValueDescriptor(
       name='k_eInternalError', index=0, number=0,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
       name='k_eSuccess', index=1, number=1,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
       name='k_eTooBusy', index=2, number=2,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
       name='k_eDisabled', index=3, number=3,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
       name='k_eTimeout', index=4, number=4,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
       name='k_eInvalidGuild', index=5, number=5,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
       name='k_eNotMember', index=6, number=6,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
       name='k_eNoPermission', index=7, number=7,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
       name='k_eMotDTooLong', index=8, number=8,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
       name='k_eNameChangeNoPermissions', index=9, number=9,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
       name='k_eTagChangeNoPermissions', index=10, number=10,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
       name='k_eNameInvalid', index=11, number=11,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
       name='k_eTagInvalid', index=12, number=12,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
       name='k_eDescriptionInvalid', index=13, number=13,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='k_eBlocked', index=14, number=14,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=2613,
-  serialized_end=2920,
+  serialized_start=2804,
+  serialized_end=3127,
 )
 _sym_db.RegisterEnumDescriptor(_CMSGCLIENTTOGCSETGUILDINFORESPONSE_ERESPONSE)
 
@@ -328,40 +415,48 @@ _CMSGCLIENTTOGCREQUESTGUILDDATARESPONSE_ERESPONSE = _descriptor.EnumDescriptor(
   full_name='dota.CMsgClientToGCRequestGuildDataResponse.EResponse',
   filename=None,
   file=DESCRIPTOR,
+  create_key=_descriptor._internal_create_key,
   values=[
     _descriptor.EnumValueDescriptor(
       name='k_eInternalError', index=0, number=0,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
       name='k_eSuccess', index=1, number=1,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
       name='k_eTooBusy', index=2, number=2,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
       name='k_eDisabled', index=3, number=3,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
       name='k_eTimeout', index=4, number=4,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
       name='k_eInvalidGuild', index=5, number=5,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
       name='k_eNotMember', index=6, number=6,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=2613,
-  serialized_end=2750,
+  serialized_start=2804,
+  serialized_end=2941,
 )
 _sym_db.RegisterEnumDescriptor(_CMSGCLIENTTOGCREQUESTGUILDDATARESPONSE_ERESPONSE)
 
@@ -370,32 +465,38 @@ _CMSGCLIENTTOGCREQUESTGUILDMEMBERSHIPRESPONSE_ERESPONSE = _descriptor.EnumDescri
   full_name='dota.CMsgClientToGCRequestGuildMembershipResponse.EResponse',
   filename=None,
   file=DESCRIPTOR,
+  create_key=_descriptor._internal_create_key,
   values=[
     _descriptor.EnumValueDescriptor(
       name='k_eInternalError', index=0, number=0,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
       name='k_eSuccess', index=1, number=1,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
       name='k_eTooBusy', index=2, number=2,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
       name='k_eDisabled', index=3, number=3,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
       name='k_eTimeout', index=4, number=4,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=2002,
-  serialized_end=2100,
+  serialized_start=2177,
+  serialized_end=2275,
 )
 _sym_db.RegisterEnumDescriptor(_CMSGCLIENTTOGCREQUESTGUILDMEMBERSHIPRESPONSE_ERESPONSE)
 
@@ -404,36 +505,43 @@ _CMSGCLIENTTOGCREQUESTGUILDSUMMARYRESPONSE_ERESPONSE = _descriptor.EnumDescripto
   full_name='dota.CMsgClientToGCRequestGuildSummaryResponse.EResponse',
   filename=None,
   file=DESCRIPTOR,
+  create_key=_descriptor._internal_create_key,
   values=[
     _descriptor.EnumValueDescriptor(
       name='k_eInternalError', index=0, number=0,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
       name='k_eSuccess', index=1, number=1,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
       name='k_eTooBusy', index=2, number=2,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
       name='k_eDisabled', index=3, number=3,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
       name='k_eTimeout', index=4, number=4,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
       name='k_eInvalidGuild', index=5, number=5,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=2613,
-  serialized_end=2732,
+  serialized_start=2804,
+  serialized_end=2923,
 )
 _sym_db.RegisterEnumDescriptor(_CMSGCLIENTTOGCREQUESTGUILDSUMMARYRESPONSE_ERESPONSE)
 
@@ -442,56 +550,68 @@ _CMSGCLIENTTOGCJOINGUILDRESPONSE_ERESPONSE = _descriptor.EnumDescriptor(
   full_name='dota.CMsgClientToGCJoinGuildResponse.EResponse',
   filename=None,
   file=DESCRIPTOR,
+  create_key=_descriptor._internal_create_key,
   values=[
     _descriptor.EnumValueDescriptor(
       name='k_eInternalError', index=0, number=0,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
       name='k_eSuccess', index=1, number=1,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
       name='k_eTooBusy', index=2, number=2,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
       name='k_eDisabled', index=3, number=3,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
       name='k_eTimeout', index=4, number=4,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
       name='k_eInvalidGuild', index=5, number=5,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
       name='k_eGuildFull', index=6, number=6,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
       name='k_eAlreadyMember', index=7, number=7,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
       name='k_eGuildLimit', index=8, number=8,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
       name='k_eGuildRequiresInvite', index=9, number=9,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
       name='k_eGuildRankTooLow', index=10, number=10,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=4361,
-  serialized_end=4591,
+  serialized_start=4672,
+  serialized_end=4902,
 )
 _sym_db.RegisterEnumDescriptor(_CMSGCLIENTTOGCJOINGUILDRESPONSE_ERESPONSE)
 
@@ -500,44 +620,53 @@ _CMSGCLIENTTOGCLEAVEGUILDRESPONSE_ERESPONSE = _descriptor.EnumDescriptor(
   full_name='dota.CMsgClientToGCLeaveGuildResponse.EResponse',
   filename=None,
   file=DESCRIPTOR,
+  create_key=_descriptor._internal_create_key,
   values=[
     _descriptor.EnumValueDescriptor(
       name='k_eInternalError', index=0, number=0,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
       name='k_eSuccess', index=1, number=1,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
       name='k_eTooBusy', index=2, number=2,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
       name='k_eDisabled', index=3, number=3,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
       name='k_eTimeout', index=4, number=4,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
       name='k_eInvalidGuild', index=5, number=5,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
       name='k_eNotMember', index=6, number=6,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
       name='k_eLastAdmin', index=7, number=7,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=4761,
-  serialized_end=4916,
+  serialized_start=5072,
+  serialized_end=5227,
 )
 _sym_db.RegisterEnumDescriptor(_CMSGCLIENTTOGCLEAVEGUILDRESPONSE_ERESPONSE)
 
@@ -546,52 +675,63 @@ _CMSGCLIENTTOGCKICKGUILDMEMBERRESPONSE_ERESPONSE = _descriptor.EnumDescriptor(
   full_name='dota.CMsgClientToGCKickGuildMemberResponse.EResponse',
   filename=None,
   file=DESCRIPTOR,
+  create_key=_descriptor._internal_create_key,
   values=[
     _descriptor.EnumValueDescriptor(
       name='k_eInternalError', index=0, number=0,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
       name='k_eSuccess', index=1, number=1,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
       name='k_eTooBusy', index=2, number=2,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
       name='k_eDisabled', index=3, number=3,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
       name='k_eTimeout', index=4, number=4,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
       name='k_eInvalidGuild', index=5, number=5,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
       name='k_eRequesterNotMember', index=6, number=6,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
       name='k_eTargetNotMember', index=7, number=7,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
       name='k_eNoPermission', index=8, number=8,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
       name='k_eCantKickSelf', index=9, number=9,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=5128,
-  serialized_end=5340,
+  serialized_start=5439,
+  serialized_end=5651,
 )
 _sym_db.RegisterEnumDescriptor(_CMSGCLIENTTOGCKICKGUILDMEMBERRESPONSE_ERESPONSE)
 
@@ -600,56 +740,68 @@ _CMSGCLIENTTOGCSETGUILDMEMBERROLERESPONSE_ERESPONSE = _descriptor.EnumDescriptor
   full_name='dota.CMsgClientToGCSetGuildMemberRoleResponse.EResponse',
   filename=None,
   file=DESCRIPTOR,
+  create_key=_descriptor._internal_create_key,
   values=[
     _descriptor.EnumValueDescriptor(
       name='k_eInternalError', index=0, number=0,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
       name='k_eSuccess', index=1, number=1,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
       name='k_eTooBusy', index=2, number=2,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
       name='k_eDisabled', index=3, number=3,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
       name='k_eTimeout', index=4, number=4,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
       name='k_eInvalidGuild', index=5, number=5,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
       name='k_eRequesterNotMember', index=6, number=6,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
       name='k_eTargetNotMember', index=7, number=7,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
       name='k_eNoPermission', index=8, number=8,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
       name='k_eInvalidRole', index=9, number=9,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
       name='k_eAdminViolation', index=10, number=10,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=5585,
-  serialized_end=5819,
+  serialized_start=5896,
+  serialized_end=6130,
 )
 _sym_db.RegisterEnumDescriptor(_CMSGCLIENTTOGCSETGUILDMEMBERROLERESPONSE_ERESPONSE)
 
@@ -658,60 +810,73 @@ _CMSGCLIENTTOGCINVITETOGUILDRESPONSE_ERESPONSE = _descriptor.EnumDescriptor(
   full_name='dota.CMsgClientToGCInviteToGuildResponse.EResponse',
   filename=None,
   file=DESCRIPTOR,
+  create_key=_descriptor._internal_create_key,
   values=[
     _descriptor.EnumValueDescriptor(
       name='k_eInternalError', index=0, number=0,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
       name='k_eSuccess', index=1, number=1,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
       name='k_eTooBusy', index=2, number=2,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
       name='k_eDisabled', index=3, number=3,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
       name='k_eTimeout', index=4, number=4,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
       name='k_eInvalidGuild', index=5, number=5,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
       name='k_eGuildFull', index=6, number=6,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
       name='k_eRequesterNotMember', index=7, number=7,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
       name='k_eAlreadyAMember', index=8, number=8,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
       name='k_eAlreadyInvited', index=9, number=9,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
       name='k_eNoInvitePermissions', index=10, number=10,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
       name='k_eTooManyInvites', index=11, number=11,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=6025,
-  serialized_end=6286,
+  serialized_start=6336,
+  serialized_end=6597,
 )
 _sym_db.RegisterEnumDescriptor(_CMSGCLIENTTOGCINVITETOGUILDRESPONSE_ERESPONSE)
 
@@ -720,40 +885,48 @@ _CMSGCLIENTTOGCDECLINEINVITETOGUILDRESPONSE_ERESPONSE = _descriptor.EnumDescript
   full_name='dota.CMsgClientToGCDeclineInviteToGuildResponse.EResponse',
   filename=None,
   file=DESCRIPTOR,
+  create_key=_descriptor._internal_create_key,
   values=[
     _descriptor.EnumValueDescriptor(
       name='k_eInternalError', index=0, number=0,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
       name='k_eSuccess', index=1, number=1,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
       name='k_eTooBusy', index=2, number=2,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
       name='k_eDisabled', index=3, number=3,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
       name='k_eTimeout', index=4, number=4,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
       name='k_eInvalidGuild', index=5, number=5,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
       name='k_eNoInviteFound', index=6, number=6,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=6486,
-  serialized_end=6627,
+  serialized_start=6797,
+  serialized_end=6938,
 )
 _sym_db.RegisterEnumDescriptor(_CMSGCLIENTTOGCDECLINEINVITETOGUILDRESPONSE_ERESPONSE)
 
@@ -762,56 +935,68 @@ _CMSGCLIENTTOGCACCEPTINVITETOGUILDRESPONSE_ERESPONSE = _descriptor.EnumDescripto
   full_name='dota.CMsgClientToGCAcceptInviteToGuildResponse.EResponse',
   filename=None,
   file=DESCRIPTOR,
+  create_key=_descriptor._internal_create_key,
   values=[
     _descriptor.EnumValueDescriptor(
       name='k_eInternalError', index=0, number=0,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
       name='k_eSuccess', index=1, number=1,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
       name='k_eTooBusy', index=2, number=2,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
       name='k_eDisabled', index=3, number=3,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
       name='k_eTimeout', index=4, number=4,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
       name='k_eInvalidGuild', index=5, number=5,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
       name='k_eNoInviteFound', index=6, number=6,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
       name='k_eGuildFull', index=7, number=7,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
       name='k_eGuildLimit', index=8, number=8,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
       name='k_eInvalidInviter', index=9, number=9,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
       name='k_eAlreadyInGuild', index=10, number=10,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=6824,
-  serialized_end=7048,
+  serialized_start=7135,
+  serialized_end=7359,
 )
 _sym_db.RegisterEnumDescriptor(_CMSGCLIENTTOGCACCEPTINVITETOGUILDRESPONSE_ERESPONSE)
 
@@ -820,44 +1005,53 @@ _CMSGCLIENTTOGCCANCELINVITETOGUILDRESPONSE_ERESPONSE = _descriptor.EnumDescripto
   full_name='dota.CMsgClientToGCCancelInviteToGuildResponse.EResponse',
   filename=None,
   file=DESCRIPTOR,
+  create_key=_descriptor._internal_create_key,
   values=[
     _descriptor.EnumValueDescriptor(
       name='k_eInternalError', index=0, number=0,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
       name='k_eSuccess', index=1, number=1,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
       name='k_eTooBusy', index=2, number=2,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
       name='k_eDisabled', index=3, number=3,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
       name='k_eTimeout', index=4, number=4,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
       name='k_eInvalidGuild', index=5, number=5,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
       name='k_eNoInviteFound', index=6, number=6,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
       name='k_eNoPermissions', index=7, number=7,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=7272,
-  serialized_end=7435,
+  serialized_start=7583,
+  serialized_end=7746,
 )
 _sym_db.RegisterEnumDescriptor(_CMSGCLIENTTOGCCANCELINVITETOGUILDRESPONSE_ERESPONSE)
 
@@ -866,60 +1060,78 @@ _CMSGCLIENTTOGCADDGUILDROLERESPONSE_ERESPONSE = _descriptor.EnumDescriptor(
   full_name='dota.CMsgClientToGCAddGuildRoleResponse.EResponse',
   filename=None,
   file=DESCRIPTOR,
+  create_key=_descriptor._internal_create_key,
   values=[
     _descriptor.EnumValueDescriptor(
       name='k_eInternalError', index=0, number=0,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
       name='k_eSuccess', index=1, number=1,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
       name='k_eTooBusy', index=2, number=2,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
       name='k_eDisabled', index=3, number=3,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
       name='k_eTimeout', index=4, number=4,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
       name='k_eInvalidGuild', index=5, number=5,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
       name='k_eNameAlreadyUsed', index=6, number=6,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
       name='k_eNoPermissions', index=7, number=7,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
       name='k_eInvalidFlags', index=8, number=8,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
       name='k_eInvalidName', index=9, number=9,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
       name='k_eAdminViolation', index=10, number=10,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
       name='k_eTooManyRoles', index=11, number=11,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='k_eBlocked', index=12, number=12,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=7667,
-  serialized_end=7917,
+  serialized_start=7978,
+  serialized_end=8244,
 )
 _sym_db.RegisterEnumDescriptor(_CMSGCLIENTTOGCADDGUILDROLERESPONSE_ERESPONSE)
 
@@ -928,60 +1140,78 @@ _CMSGCLIENTTOGCMODIFYGUILDROLERESPONSE_ERESPONSE = _descriptor.EnumDescriptor(
   full_name='dota.CMsgClientToGCModifyGuildRoleResponse.EResponse',
   filename=None,
   file=DESCRIPTOR,
+  create_key=_descriptor._internal_create_key,
   values=[
     _descriptor.EnumValueDescriptor(
       name='k_eInternalError', index=0, number=0,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
       name='k_eSuccess', index=1, number=1,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
       name='k_eTooBusy', index=2, number=2,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
       name='k_eDisabled', index=3, number=3,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
       name='k_eTimeout', index=4, number=4,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
       name='k_eInvalidGuild', index=5, number=5,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
       name='k_eInvalidRole', index=6, number=6,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
       name='k_eNameAlreadyUsed', index=7, number=7,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
       name='k_eInvalidFlags', index=8, number=8,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
       name='k_eInvalidName', index=9, number=9,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
       name='k_eNoPermissions', index=10, number=10,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
       name='k_eAdminViolation', index=11, number=11,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
+    _descriptor.EnumValueDescriptor(
+      name='k_eBlocked', index=12, number=12,
+      serialized_options=None,
+      type=None,
+      create_key=_descriptor._internal_create_key),
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=8158,
-  serialized_end=8407,
+  serialized_start=8485,
+  serialized_end=8750,
 )
 _sym_db.RegisterEnumDescriptor(_CMSGCLIENTTOGCMODIFYGUILDROLERESPONSE_ERESPONSE)
 
@@ -990,56 +1220,68 @@ _CMSGCLIENTTOGCREMOVEGUILDROLERESPONSE_ERESPONSE = _descriptor.EnumDescriptor(
   full_name='dota.CMsgClientToGCRemoveGuildRoleResponse.EResponse',
   filename=None,
   file=DESCRIPTOR,
+  create_key=_descriptor._internal_create_key,
   values=[
     _descriptor.EnumValueDescriptor(
       name='k_eInternalError', index=0, number=0,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
       name='k_eSuccess', index=1, number=1,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
       name='k_eTooBusy', index=2, number=2,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
       name='k_eDisabled', index=3, number=3,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
       name='k_eTimeout', index=4, number=4,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
       name='k_eInvalidGuild', index=5, number=5,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
       name='k_eInvalidRole', index=6, number=6,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
       name='k_eRoleNotEmpty', index=7, number=7,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
       name='k_eNoPermissions', index=8, number=8,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
       name='k_eAdminViolation', index=9, number=9,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
       name='k_eCantRemoveDefaultRole', index=10, number=10,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=8609,
-  serialized_end=8844,
+  serialized_start=8952,
+  serialized_end=9187,
 )
 _sym_db.RegisterEnumDescriptor(_CMSGCLIENTTOGCREMOVEGUILDROLERESPONSE_ERESPONSE)
 
@@ -1048,52 +1290,63 @@ _CMSGCLIENTTOGCSETGUILDROLEORDERRESPONSE_ERESPONSE = _descriptor.EnumDescriptor(
   full_name='dota.CMsgClientToGCSetGuildRoleOrderResponse.EResponse',
   filename=None,
   file=DESCRIPTOR,
+  create_key=_descriptor._internal_create_key,
   values=[
     _descriptor.EnumValueDescriptor(
       name='k_eInternalError', index=0, number=0,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
       name='k_eSuccess', index=1, number=1,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
       name='k_eTooBusy', index=2, number=2,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
       name='k_eDisabled', index=3, number=3,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
       name='k_eTimeout', index=4, number=4,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
       name='k_eInvalidGuild', index=5, number=5,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
       name='k_eInvalidRole', index=6, number=6,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
       name='k_eInvalidOrder', index=7, number=7,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
       name='k_eNoPermissions', index=8, number=8,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
       name='k_eAdminViolation', index=9, number=9,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=9118,
-  serialized_end=9323,
+  serialized_start=9461,
+  serialized_end=9666,
 )
 _sym_db.RegisterEnumDescriptor(_CMSGCLIENTTOGCSETGUILDROLEORDERRESPONSE_ERESPONSE)
 
@@ -1102,40 +1355,48 @@ _CMSGCLIENTTOGCREQUESTGUILDFEEDRESPONSE_ERESPONSE = _descriptor.EnumDescriptor(
   full_name='dota.CMsgClientToGCRequestGuildFeedResponse.EResponse',
   filename=None,
   file=DESCRIPTOR,
+  create_key=_descriptor._internal_create_key,
   values=[
     _descriptor.EnumValueDescriptor(
       name='k_eInternalError', index=0, number=0,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
       name='k_eSuccess', index=1, number=1,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
       name='k_eTooBusy', index=2, number=2,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
       name='k_eDisabled', index=3, number=3,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
       name='k_eTimeout', index=4, number=4,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
       name='k_eInvalidGuild', index=5, number=5,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
       name='k_eNoPermissions', index=6, number=6,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=9598,
-  serialized_end=9739,
+  serialized_start=9941,
+  serialized_end=10082,
 )
 _sym_db.RegisterEnumDescriptor(_CMSGCLIENTTOGCREQUESTGUILDFEEDRESPONSE_ERESPONSE)
 
@@ -1144,44 +1405,53 @@ _CMSGCLIENTTOGCADDPLAYERTOGUILDCHATRESPONSE_ERESPONSE = _descriptor.EnumDescript
   full_name='dota.CMsgClientToGCAddPlayerToGuildChatResponse.EResponse',
   filename=None,
   file=DESCRIPTOR,
+  create_key=_descriptor._internal_create_key,
   values=[
     _descriptor.EnumValueDescriptor(
       name='k_eInternalError', index=0, number=0,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
       name='k_eSuccess', index=1, number=1,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
       name='k_eTooBusy', index=2, number=2,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
       name='k_eDisabled', index=3, number=3,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
       name='k_eTimeout', index=4, number=4,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
       name='k_eInvalidGuild', index=5, number=5,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
       name='k_eNotMember', index=6, number=6,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
       name='k_eSteamChatNotEnabled', index=7, number=7,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=9991,
-  serialized_end=10156,
+  serialized_start=10334,
+  serialized_end=10499,
 )
 _sym_db.RegisterEnumDescriptor(_CMSGCLIENTTOGCADDPLAYERTOGUILDCHATRESPONSE_ERESPONSE)
 
@@ -1190,40 +1460,48 @@ _CMSGFINDGUILDBYTAGRESPONSE_ERESPONSE = _descriptor.EnumDescriptor(
   full_name='dota.CMsgFindGuildByTagResponse.EResponse',
   filename=None,
   file=DESCRIPTOR,
+  create_key=_descriptor._internal_create_key,
   values=[
     _descriptor.EnumValueDescriptor(
       name='k_eInternalError', index=0, number=0,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
       name='k_eSuccess', index=1, number=1,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
       name='k_eTooBusy', index=2, number=2,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
       name='k_eDisabled', index=3, number=3,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
       name='k_eTimeout', index=4, number=4,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
       name='k_eInvalidTag', index=5, number=5,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
       name='k_eGuildNotFound', index=6, number=6,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=10333,
-  serialized_end=10472,
+  serialized_start=10676,
+  serialized_end=10815,
 )
 _sym_db.RegisterEnumDescriptor(_CMSGFINDGUILDBYTAGRESPONSE_ERESPONSE)
 
@@ -1232,32 +1510,38 @@ _CMSGSEARCHFOROPENGUILDSRESPONSE_ERESPONSE = _descriptor.EnumDescriptor(
   full_name='dota.CMsgSearchForOpenGuildsResponse.EResponse',
   filename=None,
   file=DESCRIPTOR,
+  create_key=_descriptor._internal_create_key,
   values=[
     _descriptor.EnumValueDescriptor(
       name='k_eInternalError', index=0, number=0,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
       name='k_eSuccess', index=1, number=1,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
       name='k_eTooBusy', index=2, number=2,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
       name='k_eDisabled', index=3, number=3,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
       name='k_eTimeout', index=4, number=4,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=2002,
-  serialized_end=2100,
+  serialized_start=2177,
+  serialized_end=2275,
 )
 _sym_db.RegisterEnumDescriptor(_CMSGSEARCHFOROPENGUILDSRESPONSE_ERESPONSE)
 
@@ -1266,32 +1550,38 @@ _CMSGCLIENTTOGCREPORTGUILDCONTENT_ECONTENTFLAGS = _descriptor.EnumDescriptor(
   full_name='dota.CMsgClientToGCReportGuildContent.EContentFlags',
   filename=None,
   file=DESCRIPTOR,
+  create_key=_descriptor._internal_create_key,
   values=[
     _descriptor.EnumValueDescriptor(
       name='k_eNone', index=0, number=0,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
       name='k_eInappropriateName', index=1, number=1,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
       name='k_eInappropriateTag', index=2, number=2,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
       name='k_eInappropriateLogo', index=3, number=4,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
       name='k_eValidFlags', index=4, number=7,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=10934,
-  serialized_end=11058,
+  serialized_start=11300,
+  serialized_end=11424,
 )
 _sym_db.RegisterEnumDescriptor(_CMSGCLIENTTOGCREPORTGUILDCONTENT_ECONTENTFLAGS)
 
@@ -1300,40 +1590,48 @@ _CMSGCLIENTTOGCREPORTGUILDCONTENTRESPONSE_ERESPONSE = _descriptor.EnumDescriptor
   full_name='dota.CMsgClientToGCReportGuildContentResponse.EResponse',
   filename=None,
   file=DESCRIPTOR,
+  create_key=_descriptor._internal_create_key,
   values=[
     _descriptor.EnumValueDescriptor(
       name='k_eInternalError', index=0, number=0,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
       name='k_eSuccess', index=1, number=1,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
       name='k_eTooBusy', index=2, number=2,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
       name='k_eDisabled', index=3, number=3,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
       name='k_eTimeout', index=4, number=4,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
       name='k_eGuildNotFound', index=5, number=5,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
       name='k_eFlagsInvalid', index=6, number=6,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=11198,
-  serialized_end=11339,
+  serialized_start=11564,
+  serialized_end=11705,
 )
 _sym_db.RegisterEnumDescriptor(_CMSGCLIENTTOGCREPORTGUILDCONTENTRESPONSE_ERESPONSE)
 
@@ -1342,36 +1640,43 @@ _CMSGCLIENTTOGCREQUESTACCOUNTGUILDPERSONAINFORESPONSE_ERESPONSE = _descriptor.En
   full_name='dota.CMsgClientToGCRequestAccountGuildPersonaInfoResponse.EResponse',
   filename=None,
   file=DESCRIPTOR,
+  create_key=_descriptor._internal_create_key,
   values=[
     _descriptor.EnumValueDescriptor(
       name='k_eInternalError', index=0, number=0,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
       name='k_eSuccess', index=1, number=1,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
       name='k_eTooBusy', index=2, number=2,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
       name='k_eDisabled', index=3, number=3,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
       name='k_eTimeout', index=4, number=4,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
       name='k_eInvalidAccount', index=5, number=5,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=11628,
-  serialized_end=11749,
+  serialized_start=11994,
+  serialized_end=12115,
 )
 _sym_db.RegisterEnumDescriptor(_CMSGCLIENTTOGCREQUESTACCOUNTGUILDPERSONAINFORESPONSE_ERESPONSE)
 
@@ -1380,36 +1685,43 @@ _CMSGCLIENTTOGCREQUESTACCOUNTGUILDPERSONAINFOBATCHRESPONSE_ERESPONSE = _descript
   full_name='dota.CMsgClientToGCRequestAccountGuildPersonaInfoBatchResponse.EResponse',
   filename=None,
   file=DESCRIPTOR,
+  create_key=_descriptor._internal_create_key,
   values=[
     _descriptor.EnumValueDescriptor(
       name='k_eInternalError', index=0, number=0,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
       name='k_eSuccess', index=1, number=1,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
       name='k_eTooBusy', index=2, number=2,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
       name='k_eDisabled', index=3, number=3,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
       name='k_eTimeout', index=4, number=4,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
     _descriptor.EnumValueDescriptor(
       name='k_eInvalidRequest', index=5, number=5,
       serialized_options=None,
-      type=None),
+      type=None,
+      create_key=_descriptor._internal_create_key),
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=12055,
-  serialized_end=12176,
+  serialized_start=12421,
+  serialized_end=12542,
 )
 _sym_db.RegisterEnumDescriptor(_CMSGCLIENTTOGCREQUESTACCOUNTGUILDPERSONAINFOBATCHRESPONSE_ERESPONSE)
 
@@ -1420,6 +1732,7 @@ _CMSGGUILDINFO = _descriptor.Descriptor(
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
+  create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
       name='guild_name', full_name='dota.CMsgGuildInfo.guild_name', index=0,
@@ -1427,119 +1740,119 @@ _CMSGGUILDINFO = _descriptor.Descriptor(
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
       name='guild_tag', full_name='dota.CMsgGuildInfo.guild_tag', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
       name='created_timestamp', full_name='dota.CMsgGuildInfo.created_timestamp', index=2,
       number=3, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
       name='guild_language', full_name='dota.CMsgGuildInfo.guild_language', index=3,
       number=4, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
       name='guild_flags', full_name='dota.CMsgGuildInfo.guild_flags', index=4,
       number=5, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
       name='guild_logo', full_name='dota.CMsgGuildInfo.guild_logo', index=5,
       number=7, type=4, cpp_type=4, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
       name='guild_region', full_name='dota.CMsgGuildInfo.guild_region', index=6,
       number=8, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
       name='guild_chat_group_id', full_name='dota.CMsgGuildInfo.guild_chat_group_id', index=7,
       number=9, type=4, cpp_type=4, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
       name='guild_description', full_name='dota.CMsgGuildInfo.guild_description', index=8,
       number=10, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
       name='default_chat_channel_id', full_name='dota.CMsgGuildInfo.default_chat_channel_id', index=9,
       number=11, type=4, cpp_type=4, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
       name='guild_primary_color', full_name='dota.CMsgGuildInfo.guild_primary_color', index=10,
       number=12, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
       name='guild_secondary_color', full_name='dota.CMsgGuildInfo.guild_secondary_color', index=11,
       number=13, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
       name='guild_pattern', full_name='dota.CMsgGuildInfo.guild_pattern', index=12,
       number=14, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
       name='guild_refresh_time_offset', full_name='dota.CMsgGuildInfo.guild_refresh_time_offset', index=13,
       number=15, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
       name='guild_required_rank_tier', full_name='dota.CMsgGuildInfo.guild_required_rank_tier', index=14,
       number=16, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
       name='guild_motd_timestamp', full_name='dota.CMsgGuildInfo.guild_motd_timestamp', index=15,
       number=17, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
       name='guild_motd', full_name='dota.CMsgGuildInfo.guild_motd', index=16,
       number=18, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -1563,6 +1876,7 @@ _CMSGGUILDSUMMARY_EVENTPOINTS = _descriptor.Descriptor(
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
+  create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
       name='event_id', full_name='dota.CMsgGuildSummary.EventPoints.event_id', index=0,
@@ -1570,14 +1884,42 @@ _CMSGGUILDSUMMARY_EVENTPOINTS = _descriptor.Descriptor(
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
       name='guild_points', full_name='dota.CMsgGuildSummary.EventPoints.guild_points', index=1,
       number=2, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='guild_rank', full_name='dota.CMsgGuildSummary.EventPoints.guild_rank', index=2,
+      number=3, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='guild_weekly_rank', full_name='dota.CMsgGuildSummary.EventPoints.guild_weekly_rank', index=3,
+      number=4, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='guild_weekly_percentile', full_name='dota.CMsgGuildSummary.EventPoints.guild_weekly_percentile', index=4,
+      number=5, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='guild_current_percentile', full_name='dota.CMsgGuildSummary.EventPoints.guild_current_percentile', index=5,
+      number=6, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -1590,8 +1932,8 @@ _CMSGGUILDSUMMARY_EVENTPOINTS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=648,
-  serialized_end=701,
+  serialized_start=649,
+  serialized_end=816,
 )
 
 _CMSGGUILDSUMMARY = _descriptor.Descriptor(
@@ -1600,6 +1942,7 @@ _CMSGGUILDSUMMARY = _descriptor.Descriptor(
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
+  create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
       name='guild_info', full_name='dota.CMsgGuildSummary.guild_info', index=0,
@@ -1607,21 +1950,21 @@ _CMSGGUILDSUMMARY = _descriptor.Descriptor(
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
       name='member_count', full_name='dota.CMsgGuildSummary.member_count', index=1,
       number=2, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
       name='event_points', full_name='dota.CMsgGuildSummary.event_points', index=2,
       number=3, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -1635,7 +1978,7 @@ _CMSGGUILDSUMMARY = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=507,
-  serialized_end=701,
+  serialized_end=816,
 )
 
 
@@ -1645,6 +1988,7 @@ _CMSGGUILDROLE = _descriptor.Descriptor(
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
+  create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
       name='role_id', full_name='dota.CMsgGuildRole.role_id', index=0,
@@ -1652,28 +1996,28 @@ _CMSGGUILDROLE = _descriptor.Descriptor(
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
       name='role_name', full_name='dota.CMsgGuildRole.role_name', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
       name='role_flags', full_name='dota.CMsgGuildRole.role_flags', index=2,
       number=3, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
       name='role_order', full_name='dota.CMsgGuildRole.role_order', index=3,
       number=4, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -1686,8 +2030,8 @@ _CMSGGUILDROLE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=703,
-  serialized_end=794,
+  serialized_start=818,
+  serialized_end=909,
 )
 
 
@@ -1697,6 +2041,7 @@ _CMSGGUILDMEMBER = _descriptor.Descriptor(
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
+  create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
       name='member_account_id', full_name='dota.CMsgGuildMember.member_account_id', index=0,
@@ -1704,21 +2049,28 @@ _CMSGGUILDMEMBER = _descriptor.Descriptor(
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
       name='member_role_id', full_name='dota.CMsgGuildMember.member_role_id', index=1,
       number=2, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
       name='member_joined_timestamp', full_name='dota.CMsgGuildMember.member_joined_timestamp', index=2,
       number=3, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='member_last_active_timestamp', full_name='dota.CMsgGuildMember.member_last_active_timestamp', index=3,
+      number=4, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -1731,8 +2083,8 @@ _CMSGGUILDMEMBER = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=796,
-  serialized_end=897,
+  serialized_start=912,
+  serialized_end=1051,
 )
 
 
@@ -1742,6 +2094,7 @@ _CMSGGUILDINVITE = _descriptor.Descriptor(
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
+  create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
       name='requester_account_id', full_name='dota.CMsgGuildInvite.requester_account_id', index=0,
@@ -1749,21 +2102,21 @@ _CMSGGUILDINVITE = _descriptor.Descriptor(
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
       name='target_account_id', full_name='dota.CMsgGuildInvite.target_account_id', index=1,
       number=2, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
       name='timestamp_sent', full_name='dota.CMsgGuildInvite.timestamp_sent', index=2,
       number=3, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -1776,8 +2129,8 @@ _CMSGGUILDINVITE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=899,
-  serialized_end=997,
+  serialized_start=1053,
+  serialized_end=1151,
 )
 
 
@@ -1787,6 +2140,7 @@ _CMSGGUILDDATA = _descriptor.Descriptor(
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
+  create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
       name='guild_id', full_name='dota.CMsgGuildData.guild_id', index=0,
@@ -1794,35 +2148,35 @@ _CMSGGUILDDATA = _descriptor.Descriptor(
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
       name='guild_info', full_name='dota.CMsgGuildData.guild_info', index=1,
       number=2, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
       name='guild_roles', full_name='dota.CMsgGuildData.guild_roles', index=2,
       number=3, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
       name='guild_members', full_name='dota.CMsgGuildData.guild_members', index=3,
       number=4, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
       name='guild_invites', full_name='dota.CMsgGuildData.guild_invites', index=4,
       number=5, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -1835,8 +2189,8 @@ _CMSGGUILDDATA = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1000,
-  serialized_end=1208,
+  serialized_start=1154,
+  serialized_end=1362,
 )
 
 
@@ -1846,6 +2200,7 @@ _CMSGACCOUNTGUILDINVITE = _descriptor.Descriptor(
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
+  create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
       name='guild_id', full_name='dota.CMsgAccountGuildInvite.guild_id', index=0,
@@ -1853,21 +2208,21 @@ _CMSGACCOUNTGUILDINVITE = _descriptor.Descriptor(
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
       name='requester_account_id', full_name='dota.CMsgAccountGuildInvite.requester_account_id', index=1,
       number=2, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
       name='timestamp_sent', full_name='dota.CMsgAccountGuildInvite.timestamp_sent', index=2,
       number=3, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -1880,8 +2235,8 @@ _CMSGACCOUNTGUILDINVITE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1210,
-  serialized_end=1306,
+  serialized_start=1364,
+  serialized_end=1460,
 )
 
 
@@ -1891,6 +2246,7 @@ _CMSGACCOUNTGUILDMEMBERSHIPS = _descriptor.Descriptor(
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
+  create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
       name='guild_ids', full_name='dota.CMsgAccountGuildMemberships.guild_ids', index=0,
@@ -1898,14 +2254,14 @@ _CMSGACCOUNTGUILDMEMBERSHIPS = _descriptor.Descriptor(
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
       name='guild_invites', full_name='dota.CMsgAccountGuildMemberships.guild_invites', index=1,
       number=2, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -1918,8 +2274,8 @@ _CMSGACCOUNTGUILDMEMBERSHIPS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1308,
-  serialized_end=1409,
+  serialized_start=1462,
+  serialized_end=1563,
 )
 
 
@@ -1929,6 +2285,7 @@ _CMSGGUILDPERSONAINFO = _descriptor.Descriptor(
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
+  create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
       name='guild_id', full_name='dota.CMsgGuildPersonaInfo.guild_id', index=0,
@@ -1936,14 +2293,21 @@ _CMSGGUILDPERSONAINFO = _descriptor.Descriptor(
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
       name='guild_tag', full_name='dota.CMsgGuildPersonaInfo.guild_tag', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='guild_flags', full_name='dota.CMsgGuildPersonaInfo.guild_flags', index=2,
+      number=3, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -1956,8 +2320,8 @@ _CMSGGUILDPERSONAINFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1411,
-  serialized_end=1470,
+  serialized_start=1565,
+  serialized_end=1645,
 )
 
 
@@ -1967,6 +2331,7 @@ _CMSGACCOUNTGUILDSPERSONAINFO = _descriptor.Descriptor(
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
+  create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
       name='guild_persona_infos', full_name='dota.CMsgAccountGuildsPersonaInfo.guild_persona_infos', index=0,
@@ -1974,7 +2339,7 @@ _CMSGACCOUNTGUILDSPERSONAINFO = _descriptor.Descriptor(
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -1987,8 +2352,8 @@ _CMSGACCOUNTGUILDSPERSONAINFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1472,
-  serialized_end=1559,
+  serialized_start=1647,
+  serialized_end=1734,
 )
 
 
@@ -1998,6 +2363,7 @@ _CMSGGUILDFEEDEVENT = _descriptor.Descriptor(
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
+  create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
       name='feed_event_id', full_name='dota.CMsgGuildFeedEvent.feed_event_id', index=0,
@@ -2005,42 +2371,42 @@ _CMSGGUILDFEEDEVENT = _descriptor.Descriptor(
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
       name='timestamp', full_name='dota.CMsgGuildFeedEvent.timestamp', index=1,
       number=2, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
       name='event_type', full_name='dota.CMsgGuildFeedEvent.event_type', index=2,
       number=3, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
       name='param_uint_1', full_name='dota.CMsgGuildFeedEvent.param_uint_1', index=3,
       number=4, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
       name='param_uint_2', full_name='dota.CMsgGuildFeedEvent.param_uint_2', index=4,
       number=5, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
       name='param_uint_3', full_name='dota.CMsgGuildFeedEvent.param_uint_3', index=5,
       number=6, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -2053,8 +2419,8 @@ _CMSGGUILDFEEDEVENT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1562,
-  serialized_end=1710,
+  serialized_start=1737,
+  serialized_end=1885,
 )
 
 
@@ -2064,6 +2430,7 @@ _CMSGCLIENTTOGCCREATEGUILD = _descriptor.Descriptor(
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
+  create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
       name='guild_info', full_name='dota.CMsgClientToGCCreateGuild.guild_info', index=0,
@@ -2071,14 +2438,14 @@ _CMSGCLIENTTOGCCREATEGUILD = _descriptor.Descriptor(
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
       name='guild_chat_type', full_name='dota.CMsgClientToGCCreateGuild.guild_chat_type', index=1,
       number=2, type=14, cpp_type=8, label=1,
       has_default_value=True, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -2091,8 +2458,8 @@ _CMSGCLIENTTOGCCREATEGUILD = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1713,
-  serialized_end=1858,
+  serialized_start=1888,
+  serialized_end=2033,
 )
 
 
@@ -2102,6 +2469,7 @@ _CMSGCLIENTTOGCCREATEGUILDRESPONSE = _descriptor.Descriptor(
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
+  create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
       name='result', full_name='dota.CMsgClientToGCCreateGuildResponse.result', index=0,
@@ -2109,14 +2477,14 @@ _CMSGCLIENTTOGCCREATEGUILDRESPONSE = _descriptor.Descriptor(
       has_default_value=True, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
       name='guild_id', full_name='dota.CMsgClientToGCCreateGuildResponse.guild_id', index=1,
       number=2, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -2130,8 +2498,8 @@ _CMSGCLIENTTOGCCREATEGUILDRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1861,
-  serialized_end=2318,
+  serialized_start=2036,
+  serialized_end=2509,
 )
 
 
@@ -2141,6 +2509,7 @@ _CMSGCLIENTTOGCSETGUILDINFO = _descriptor.Descriptor(
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
+  create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
       name='guild_id', full_name='dota.CMsgClientToGCSetGuildInfo.guild_id', index=0,
@@ -2148,21 +2517,21 @@ _CMSGCLIENTTOGCSETGUILDINFO = _descriptor.Descriptor(
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
       name='guild_info', full_name='dota.CMsgClientToGCSetGuildInfo.guild_info', index=1,
       number=2, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
       name='guild_chat_type', full_name='dota.CMsgClientToGCSetGuildInfo.guild_chat_type', index=2,
       number=3, type=14, cpp_type=8, label=1,
       has_default_value=True, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -2175,8 +2544,8 @@ _CMSGCLIENTTOGCSETGUILDINFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2321,
-  serialized_end=2485,
+  serialized_start=2512,
+  serialized_end=2676,
 )
 
 
@@ -2186,6 +2555,7 @@ _CMSGCLIENTTOGCSETGUILDINFORESPONSE = _descriptor.Descriptor(
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
+  create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
       name='result', full_name='dota.CMsgClientToGCSetGuildInfoResponse.result', index=0,
@@ -2193,7 +2563,7 @@ _CMSGCLIENTTOGCSETGUILDINFORESPONSE = _descriptor.Descriptor(
       has_default_value=True, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -2207,8 +2577,8 @@ _CMSGCLIENTTOGCSETGUILDINFORESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2488,
-  serialized_end=2920,
+  serialized_start=2679,
+  serialized_end=3127,
 )
 
 
@@ -2218,6 +2588,7 @@ _CMSGCLIENTTOGCREQUESTGUILDDATA = _descriptor.Descriptor(
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
+  create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
       name='guild_id', full_name='dota.CMsgClientToGCRequestGuildData.guild_id', index=0,
@@ -2225,7 +2596,7 @@ _CMSGCLIENTTOGCREQUESTGUILDDATA = _descriptor.Descriptor(
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -2238,8 +2609,8 @@ _CMSGCLIENTTOGCREQUESTGUILDDATA = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2922,
-  serialized_end=2972,
+  serialized_start=3129,
+  serialized_end=3179,
 )
 
 
@@ -2249,6 +2620,7 @@ _CMSGCLIENTTOGCREQUESTGUILDDATARESPONSE = _descriptor.Descriptor(
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
+  create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
       name='result', full_name='dota.CMsgClientToGCRequestGuildDataResponse.result', index=0,
@@ -2256,14 +2628,14 @@ _CMSGCLIENTTOGCREQUESTGUILDDATARESPONSE = _descriptor.Descriptor(
       has_default_value=True, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
       name='guild_data', full_name='dota.CMsgClientToGCRequestGuildDataResponse.guild_data', index=1,
       number=2, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -2277,8 +2649,8 @@ _CMSGCLIENTTOGCREQUESTGUILDDATARESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2975,
-  serialized_end=3286,
+  serialized_start=3182,
+  serialized_end=3493,
 )
 
 
@@ -2288,6 +2660,7 @@ _CMSGGCTOCLIENTGUILDDATAUPDATED = _descriptor.Descriptor(
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
+  create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
       name='guild_data', full_name='dota.CMsgGCToClientGuildDataUpdated.guild_data', index=0,
@@ -2295,14 +2668,14 @@ _CMSGGCTOCLIENTGUILDDATAUPDATED = _descriptor.Descriptor(
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
       name='update_flags', full_name='dota.CMsgGCToClientGuildDataUpdated.update_flags', index=1,
       number=2, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -2315,8 +2688,47 @@ _CMSGGCTOCLIENTGUILDDATAUPDATED = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3288,
-  serialized_end=3383,
+  serialized_start=3495,
+  serialized_end=3590,
+)
+
+
+_CMSGGCTOCLIENTGUILDMEMBERSDATAUPDATED = _descriptor.Descriptor(
+  name='CMsgGCToClientGuildMembersDataUpdated',
+  full_name='dota.CMsgGCToClientGuildMembersDataUpdated',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='guild_id', full_name='dota.CMsgGCToClientGuildMembersDataUpdated.guild_id', index=0,
+      number=1, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='members_data', full_name='dota.CMsgGCToClientGuildMembersDataUpdated.members_data', index=1,
+      number=2, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto2',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=3592,
+  serialized_end=3694,
 )
 
 
@@ -2326,6 +2738,7 @@ _CMSGCLIENTTOGCREQUESTGUILDMEMBERSHIP = _descriptor.Descriptor(
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
+  create_key=_descriptor._internal_create_key,
   fields=[
   ],
   extensions=[
@@ -2339,8 +2752,8 @@ _CMSGCLIENTTOGCREQUESTGUILDMEMBERSHIP = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3385,
-  serialized_end=3423,
+  serialized_start=3696,
+  serialized_end=3734,
 )
 
 
@@ -2350,6 +2763,7 @@ _CMSGCLIENTTOGCREQUESTGUILDMEMBERSHIPRESPONSE = _descriptor.Descriptor(
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
+  create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
       name='result', full_name='dota.CMsgClientToGCRequestGuildMembershipResponse.result', index=0,
@@ -2357,14 +2771,14 @@ _CMSGCLIENTTOGCREQUESTGUILDMEMBERSHIPRESPONSE = _descriptor.Descriptor(
       has_default_value=True, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
       name='guild_memberships', full_name='dota.CMsgClientToGCRequestGuildMembershipResponse.guild_memberships', index=1,
       number=2, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -2378,8 +2792,8 @@ _CMSGCLIENTTOGCREQUESTGUILDMEMBERSHIPRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3426,
-  serialized_end=3730,
+  serialized_start=3737,
+  serialized_end=4041,
 )
 
 
@@ -2389,6 +2803,7 @@ _CMSGGCTOCLIENTGUILDMEMBERSHIPUPDATED = _descriptor.Descriptor(
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
+  create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
       name='guild_memberships', full_name='dota.CMsgGCToClientGuildMembershipUpdated.guild_memberships', index=0,
@@ -2396,7 +2811,7 @@ _CMSGGCTOCLIENTGUILDMEMBERSHIPUPDATED = _descriptor.Descriptor(
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -2409,8 +2824,8 @@ _CMSGGCTOCLIENTGUILDMEMBERSHIPUPDATED = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3732,
-  serialized_end=3832,
+  serialized_start=4043,
+  serialized_end=4143,
 )
 
 
@@ -2420,6 +2835,7 @@ _CMSGCLIENTTOGCREQUESTGUILDSUMMARY = _descriptor.Descriptor(
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
+  create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
       name='guild_id', full_name='dota.CMsgClientToGCRequestGuildSummary.guild_id', index=0,
@@ -2427,7 +2843,7 @@ _CMSGCLIENTTOGCREQUESTGUILDSUMMARY = _descriptor.Descriptor(
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -2440,8 +2856,8 @@ _CMSGCLIENTTOGCREQUESTGUILDSUMMARY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3834,
-  serialized_end=3887,
+  serialized_start=4145,
+  serialized_end=4198,
 )
 
 
@@ -2451,6 +2867,7 @@ _CMSGCLIENTTOGCREQUESTGUILDSUMMARYRESPONSE = _descriptor.Descriptor(
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
+  create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
       name='result', full_name='dota.CMsgClientToGCRequestGuildSummaryResponse.result', index=0,
@@ -2458,14 +2875,14 @@ _CMSGCLIENTTOGCREQUESTGUILDSUMMARYRESPONSE = _descriptor.Descriptor(
       has_default_value=True, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
       name='guild_summary', full_name='dota.CMsgClientToGCRequestGuildSummaryResponse.guild_summary', index=1,
       number=2, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -2479,8 +2896,8 @@ _CMSGCLIENTTOGCREQUESTGUILDSUMMARYRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3890,
-  serialized_end=4194,
+  serialized_start=4201,
+  serialized_end=4505,
 )
 
 
@@ -2490,6 +2907,7 @@ _CMSGCLIENTTOGCJOINGUILD = _descriptor.Descriptor(
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
+  create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
       name='guild_id', full_name='dota.CMsgClientToGCJoinGuild.guild_id', index=0,
@@ -2497,7 +2915,7 @@ _CMSGCLIENTTOGCJOINGUILD = _descriptor.Descriptor(
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -2510,8 +2928,8 @@ _CMSGCLIENTTOGCJOINGUILD = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4196,
-  serialized_end=4239,
+  serialized_start=4507,
+  serialized_end=4550,
 )
 
 
@@ -2521,6 +2939,7 @@ _CMSGCLIENTTOGCJOINGUILDRESPONSE = _descriptor.Descriptor(
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
+  create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
       name='result', full_name='dota.CMsgClientToGCJoinGuildResponse.result', index=0,
@@ -2528,7 +2947,7 @@ _CMSGCLIENTTOGCJOINGUILDRESPONSE = _descriptor.Descriptor(
       has_default_value=True, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -2542,8 +2961,8 @@ _CMSGCLIENTTOGCJOINGUILDRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4242,
-  serialized_end=4591,
+  serialized_start=4553,
+  serialized_end=4902,
 )
 
 
@@ -2553,6 +2972,7 @@ _CMSGCLIENTTOGCLEAVEGUILD = _descriptor.Descriptor(
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
+  create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
       name='guild_id', full_name='dota.CMsgClientToGCLeaveGuild.guild_id', index=0,
@@ -2560,7 +2980,7 @@ _CMSGCLIENTTOGCLEAVEGUILD = _descriptor.Descriptor(
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -2573,8 +2993,8 @@ _CMSGCLIENTTOGCLEAVEGUILD = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4593,
-  serialized_end=4637,
+  serialized_start=4904,
+  serialized_end=4948,
 )
 
 
@@ -2584,6 +3004,7 @@ _CMSGCLIENTTOGCLEAVEGUILDRESPONSE = _descriptor.Descriptor(
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
+  create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
       name='result', full_name='dota.CMsgClientToGCLeaveGuildResponse.result', index=0,
@@ -2591,7 +3012,7 @@ _CMSGCLIENTTOGCLEAVEGUILDRESPONSE = _descriptor.Descriptor(
       has_default_value=True, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -2605,8 +3026,8 @@ _CMSGCLIENTTOGCLEAVEGUILDRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4640,
-  serialized_end=4916,
+  serialized_start=4951,
+  serialized_end=5227,
 )
 
 
@@ -2616,6 +3037,7 @@ _CMSGCLIENTTOGCKICKGUILDMEMBER = _descriptor.Descriptor(
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
+  create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
       name='guild_id', full_name='dota.CMsgClientToGCKickGuildMember.guild_id', index=0,
@@ -2623,14 +3045,14 @@ _CMSGCLIENTTOGCKICKGUILDMEMBER = _descriptor.Descriptor(
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
       name='target_account_id', full_name='dota.CMsgClientToGCKickGuildMember.target_account_id', index=1,
       number=2, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -2643,8 +3065,8 @@ _CMSGCLIENTTOGCKICKGUILDMEMBER = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4918,
-  serialized_end=4994,
+  serialized_start=5229,
+  serialized_end=5305,
 )
 
 
@@ -2654,6 +3076,7 @@ _CMSGCLIENTTOGCKICKGUILDMEMBERRESPONSE = _descriptor.Descriptor(
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
+  create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
       name='result', full_name='dota.CMsgClientToGCKickGuildMemberResponse.result', index=0,
@@ -2661,7 +3084,7 @@ _CMSGCLIENTTOGCKICKGUILDMEMBERRESPONSE = _descriptor.Descriptor(
       has_default_value=True, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -2675,8 +3098,8 @@ _CMSGCLIENTTOGCKICKGUILDMEMBERRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4997,
-  serialized_end=5340,
+  serialized_start=5308,
+  serialized_end=5651,
 )
 
 
@@ -2686,6 +3109,7 @@ _CMSGCLIENTTOGCSETGUILDMEMBERROLE = _descriptor.Descriptor(
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
+  create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
       name='guild_id', full_name='dota.CMsgClientToGCSetGuildMemberRole.guild_id', index=0,
@@ -2693,21 +3117,21 @@ _CMSGCLIENTTOGCSETGUILDMEMBERROLE = _descriptor.Descriptor(
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
       name='target_account_id', full_name='dota.CMsgClientToGCSetGuildMemberRole.target_account_id', index=1,
       number=2, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
       name='target_role_id', full_name='dota.CMsgClientToGCSetGuildMemberRole.target_role_id', index=2,
       number=3, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -2720,8 +3144,8 @@ _CMSGCLIENTTOGCSETGUILDMEMBERROLE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5342,
-  serialized_end=5445,
+  serialized_start=5653,
+  serialized_end=5756,
 )
 
 
@@ -2731,6 +3155,7 @@ _CMSGCLIENTTOGCSETGUILDMEMBERROLERESPONSE = _descriptor.Descriptor(
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
+  create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
       name='result', full_name='dota.CMsgClientToGCSetGuildMemberRoleResponse.result', index=0,
@@ -2738,7 +3163,7 @@ _CMSGCLIENTTOGCSETGUILDMEMBERROLERESPONSE = _descriptor.Descriptor(
       has_default_value=True, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -2752,8 +3177,8 @@ _CMSGCLIENTTOGCSETGUILDMEMBERROLERESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5448,
-  serialized_end=5819,
+  serialized_start=5759,
+  serialized_end=6130,
 )
 
 
@@ -2763,6 +3188,7 @@ _CMSGCLIENTTOGCINVITETOGUILD = _descriptor.Descriptor(
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
+  create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
       name='guild_id', full_name='dota.CMsgClientToGCInviteToGuild.guild_id', index=0,
@@ -2770,14 +3196,14 @@ _CMSGCLIENTTOGCINVITETOGUILD = _descriptor.Descriptor(
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
       name='target_account_id', full_name='dota.CMsgClientToGCInviteToGuild.target_account_id', index=1,
       number=2, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -2790,8 +3216,8 @@ _CMSGCLIENTTOGCINVITETOGUILD = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5821,
-  serialized_end=5895,
+  serialized_start=6132,
+  serialized_end=6206,
 )
 
 
@@ -2801,6 +3227,7 @@ _CMSGCLIENTTOGCINVITETOGUILDRESPONSE = _descriptor.Descriptor(
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
+  create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
       name='result', full_name='dota.CMsgClientToGCInviteToGuildResponse.result', index=0,
@@ -2808,7 +3235,7 @@ _CMSGCLIENTTOGCINVITETOGUILDRESPONSE = _descriptor.Descriptor(
       has_default_value=True, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -2822,8 +3249,8 @@ _CMSGCLIENTTOGCINVITETOGUILDRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5898,
-  serialized_end=6286,
+  serialized_start=6209,
+  serialized_end=6597,
 )
 
 
@@ -2833,6 +3260,7 @@ _CMSGCLIENTTOGCDECLINEINVITETOGUILD = _descriptor.Descriptor(
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
+  create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
       name='guild_id', full_name='dota.CMsgClientToGCDeclineInviteToGuild.guild_id', index=0,
@@ -2840,7 +3268,7 @@ _CMSGCLIENTTOGCDECLINEINVITETOGUILD = _descriptor.Descriptor(
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -2853,8 +3281,8 @@ _CMSGCLIENTTOGCDECLINEINVITETOGUILD = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=6288,
-  serialized_end=6342,
+  serialized_start=6599,
+  serialized_end=6653,
 )
 
 
@@ -2864,6 +3292,7 @@ _CMSGCLIENTTOGCDECLINEINVITETOGUILDRESPONSE = _descriptor.Descriptor(
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
+  create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
       name='result', full_name='dota.CMsgClientToGCDeclineInviteToGuildResponse.result', index=0,
@@ -2871,7 +3300,7 @@ _CMSGCLIENTTOGCDECLINEINVITETOGUILDRESPONSE = _descriptor.Descriptor(
       has_default_value=True, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -2885,8 +3314,8 @@ _CMSGCLIENTTOGCDECLINEINVITETOGUILDRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=6345,
-  serialized_end=6627,
+  serialized_start=6656,
+  serialized_end=6938,
 )
 
 
@@ -2896,6 +3325,7 @@ _CMSGCLIENTTOGCACCEPTINVITETOGUILD = _descriptor.Descriptor(
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
+  create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
       name='guild_id', full_name='dota.CMsgClientToGCAcceptInviteToGuild.guild_id', index=0,
@@ -2903,7 +3333,7 @@ _CMSGCLIENTTOGCACCEPTINVITETOGUILD = _descriptor.Descriptor(
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -2916,8 +3346,8 @@ _CMSGCLIENTTOGCACCEPTINVITETOGUILD = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=6629,
-  serialized_end=6682,
+  serialized_start=6940,
+  serialized_end=6993,
 )
 
 
@@ -2927,6 +3357,7 @@ _CMSGCLIENTTOGCACCEPTINVITETOGUILDRESPONSE = _descriptor.Descriptor(
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
+  create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
       name='result', full_name='dota.CMsgClientToGCAcceptInviteToGuildResponse.result', index=0,
@@ -2934,7 +3365,7 @@ _CMSGCLIENTTOGCACCEPTINVITETOGUILDRESPONSE = _descriptor.Descriptor(
       has_default_value=True, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -2948,8 +3379,8 @@ _CMSGCLIENTTOGCACCEPTINVITETOGUILDRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=6685,
-  serialized_end=7048,
+  serialized_start=6996,
+  serialized_end=7359,
 )
 
 
@@ -2959,6 +3390,7 @@ _CMSGCLIENTTOGCCANCELINVITETOGUILD = _descriptor.Descriptor(
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
+  create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
       name='guild_id', full_name='dota.CMsgClientToGCCancelInviteToGuild.guild_id', index=0,
@@ -2966,14 +3398,14 @@ _CMSGCLIENTTOGCCANCELINVITETOGUILD = _descriptor.Descriptor(
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
       name='target_account_id', full_name='dota.CMsgClientToGCCancelInviteToGuild.target_account_id', index=1,
       number=2, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -2986,8 +3418,8 @@ _CMSGCLIENTTOGCCANCELINVITETOGUILD = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=7050,
-  serialized_end=7130,
+  serialized_start=7361,
+  serialized_end=7441,
 )
 
 
@@ -2997,6 +3429,7 @@ _CMSGCLIENTTOGCCANCELINVITETOGUILDRESPONSE = _descriptor.Descriptor(
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
+  create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
       name='result', full_name='dota.CMsgClientToGCCancelInviteToGuildResponse.result', index=0,
@@ -3004,7 +3437,7 @@ _CMSGCLIENTTOGCCANCELINVITETOGUILDRESPONSE = _descriptor.Descriptor(
       has_default_value=True, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -3018,8 +3451,8 @@ _CMSGCLIENTTOGCCANCELINVITETOGUILDRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=7133,
-  serialized_end=7435,
+  serialized_start=7444,
+  serialized_end=7746,
 )
 
 
@@ -3029,6 +3462,7 @@ _CMSGCLIENTTOGCADDGUILDROLE = _descriptor.Descriptor(
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
+  create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
       name='guild_id', full_name='dota.CMsgClientToGCAddGuildRole.guild_id', index=0,
@@ -3036,21 +3470,21 @@ _CMSGCLIENTTOGCADDGUILDROLE = _descriptor.Descriptor(
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
       name='role_name', full_name='dota.CMsgClientToGCAddGuildRole.role_name', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
       name='role_flags', full_name='dota.CMsgClientToGCAddGuildRole.role_flags', index=2,
       number=3, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -3063,8 +3497,8 @@ _CMSGCLIENTTOGCADDGUILDROLE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=7437,
-  serialized_end=7522,
+  serialized_start=7748,
+  serialized_end=7833,
 )
 
 
@@ -3074,6 +3508,7 @@ _CMSGCLIENTTOGCADDGUILDROLERESPONSE = _descriptor.Descriptor(
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
+  create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
       name='result', full_name='dota.CMsgClientToGCAddGuildRoleResponse.result', index=0,
@@ -3081,14 +3516,14 @@ _CMSGCLIENTTOGCADDGUILDROLERESPONSE = _descriptor.Descriptor(
       has_default_value=True, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
       name='role_id', full_name='dota.CMsgClientToGCAddGuildRoleResponse.role_id', index=1,
       number=2, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -3102,8 +3537,8 @@ _CMSGCLIENTTOGCADDGUILDROLERESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=7525,
-  serialized_end=7917,
+  serialized_start=7836,
+  serialized_end=8244,
 )
 
 
@@ -3113,6 +3548,7 @@ _CMSGCLIENTTOGCMODIFYGUILDROLE = _descriptor.Descriptor(
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
+  create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
       name='guild_id', full_name='dota.CMsgClientToGCModifyGuildRole.guild_id', index=0,
@@ -3120,28 +3556,28 @@ _CMSGCLIENTTOGCMODIFYGUILDROLE = _descriptor.Descriptor(
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
       name='role_id', full_name='dota.CMsgClientToGCModifyGuildRole.role_id', index=1,
       number=2, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
       name='role_name', full_name='dota.CMsgClientToGCModifyGuildRole.role_name', index=2,
       number=3, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
       name='role_flags', full_name='dota.CMsgClientToGCModifyGuildRole.role_flags', index=3,
       number=4, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -3154,8 +3590,8 @@ _CMSGCLIENTTOGCMODIFYGUILDROLE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=7919,
-  serialized_end=8024,
+  serialized_start=8246,
+  serialized_end=8351,
 )
 
 
@@ -3165,6 +3601,7 @@ _CMSGCLIENTTOGCMODIFYGUILDROLERESPONSE = _descriptor.Descriptor(
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
+  create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
       name='result', full_name='dota.CMsgClientToGCModifyGuildRoleResponse.result', index=0,
@@ -3172,7 +3609,7 @@ _CMSGCLIENTTOGCMODIFYGUILDROLERESPONSE = _descriptor.Descriptor(
       has_default_value=True, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -3186,8 +3623,8 @@ _CMSGCLIENTTOGCMODIFYGUILDROLERESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=8027,
-  serialized_end=8407,
+  serialized_start=8354,
+  serialized_end=8750,
 )
 
 
@@ -3197,6 +3634,7 @@ _CMSGCLIENTTOGCREMOVEGUILDROLE = _descriptor.Descriptor(
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
+  create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
       name='guild_id', full_name='dota.CMsgClientToGCRemoveGuildRole.guild_id', index=0,
@@ -3204,14 +3642,14 @@ _CMSGCLIENTTOGCREMOVEGUILDROLE = _descriptor.Descriptor(
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
       name='role_id', full_name='dota.CMsgClientToGCRemoveGuildRole.role_id', index=1,
       number=2, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -3224,8 +3662,8 @@ _CMSGCLIENTTOGCREMOVEGUILDROLE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=8409,
-  serialized_end=8475,
+  serialized_start=8752,
+  serialized_end=8818,
 )
 
 
@@ -3235,6 +3673,7 @@ _CMSGCLIENTTOGCREMOVEGUILDROLERESPONSE = _descriptor.Descriptor(
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
+  create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
       name='result', full_name='dota.CMsgClientToGCRemoveGuildRoleResponse.result', index=0,
@@ -3242,7 +3681,7 @@ _CMSGCLIENTTOGCREMOVEGUILDROLERESPONSE = _descriptor.Descriptor(
       has_default_value=True, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -3256,8 +3695,8 @@ _CMSGCLIENTTOGCREMOVEGUILDROLERESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=8478,
-  serialized_end=8844,
+  serialized_start=8821,
+  serialized_end=9187,
 )
 
 
@@ -3267,6 +3706,7 @@ _CMSGCLIENTTOGCSETGUILDROLEORDER = _descriptor.Descriptor(
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
+  create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
       name='guild_id', full_name='dota.CMsgClientToGCSetGuildRoleOrder.guild_id', index=0,
@@ -3274,21 +3714,21 @@ _CMSGCLIENTTOGCSETGUILDROLEORDER = _descriptor.Descriptor(
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
       name='requested_role_ids', full_name='dota.CMsgClientToGCSetGuildRoleOrder.requested_role_ids', index=1,
       number=2, type=13, cpp_type=3, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
       name='previous_role_ids', full_name='dota.CMsgClientToGCSetGuildRoleOrder.previous_role_ids', index=2,
       number=3, type=13, cpp_type=3, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -3301,8 +3741,8 @@ _CMSGCLIENTTOGCSETGUILDROLEORDER = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=8846,
-  serialized_end=8952,
+  serialized_start=9189,
+  serialized_end=9295,
 )
 
 
@@ -3312,6 +3752,7 @@ _CMSGCLIENTTOGCSETGUILDROLEORDERRESPONSE = _descriptor.Descriptor(
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
+  create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
       name='result', full_name='dota.CMsgClientToGCSetGuildRoleOrderResponse.result', index=0,
@@ -3319,14 +3760,14 @@ _CMSGCLIENTTOGCSETGUILDROLEORDERRESPONSE = _descriptor.Descriptor(
       has_default_value=True, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
       name='confirmed_role_ids', full_name='dota.CMsgClientToGCSetGuildRoleOrderResponse.confirmed_role_ids', index=1,
       number=2, type=13, cpp_type=3, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -3340,8 +3781,8 @@ _CMSGCLIENTTOGCSETGUILDROLEORDERRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=8955,
-  serialized_end=9323,
+  serialized_start=9298,
+  serialized_end=9666,
 )
 
 
@@ -3351,6 +3792,7 @@ _CMSGCLIENTTOGCGUILDFEEDREQUEST = _descriptor.Descriptor(
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
+  create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
       name='guild_id', full_name='dota.CMsgClientToGCGuildFeedRequest.guild_id', index=0,
@@ -3358,14 +3800,14 @@ _CMSGCLIENTTOGCGUILDFEEDREQUEST = _descriptor.Descriptor(
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
       name='last_seen_id', full_name='dota.CMsgClientToGCGuildFeedRequest.last_seen_id', index=1,
       number=2, type=4, cpp_type=4, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -3378,8 +3820,8 @@ _CMSGCLIENTTOGCGUILDFEEDREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=9325,
-  serialized_end=9397,
+  serialized_start=9668,
+  serialized_end=9740,
 )
 
 
@@ -3389,6 +3831,7 @@ _CMSGCLIENTTOGCREQUESTGUILDFEEDRESPONSE = _descriptor.Descriptor(
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
+  create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
       name='result', full_name='dota.CMsgClientToGCRequestGuildFeedResponse.result', index=0,
@@ -3396,21 +3839,21 @@ _CMSGCLIENTTOGCREQUESTGUILDFEEDRESPONSE = _descriptor.Descriptor(
       has_default_value=True, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
       name='guild_id', full_name='dota.CMsgClientToGCRequestGuildFeedResponse.guild_id', index=1,
       number=2, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
       name='feed_events', full_name='dota.CMsgClientToGCRequestGuildFeedResponse.feed_events', index=2,
       number=3, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -3424,8 +3867,8 @@ _CMSGCLIENTTOGCREQUESTGUILDFEEDRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=9400,
-  serialized_end=9739,
+  serialized_start=9743,
+  serialized_end=10082,
 )
 
 
@@ -3435,6 +3878,7 @@ _CMSGGCTOCLIENTGUILDFEEDUPDATED = _descriptor.Descriptor(
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
+  create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
       name='guild_id', full_name='dota.CMsgGCToClientGuildFeedUpdated.guild_id', index=0,
@@ -3442,7 +3886,7 @@ _CMSGGCTOCLIENTGUILDFEEDUPDATED = _descriptor.Descriptor(
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -3455,8 +3899,8 @@ _CMSGGCTOCLIENTGUILDFEEDUPDATED = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=9741,
-  serialized_end=9791,
+  serialized_start=10084,
+  serialized_end=10134,
 )
 
 
@@ -3466,6 +3910,7 @@ _CMSGCLIENTTOGCADDPLAYERTOGUILDCHAT = _descriptor.Descriptor(
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
+  create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
       name='guild_id', full_name='dota.CMsgClientToGCAddPlayerToGuildChat.guild_id', index=0,
@@ -3473,7 +3918,7 @@ _CMSGCLIENTTOGCADDPLAYERTOGUILDCHAT = _descriptor.Descriptor(
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -3486,8 +3931,8 @@ _CMSGCLIENTTOGCADDPLAYERTOGUILDCHAT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=9793,
-  serialized_end=9847,
+  serialized_start=10136,
+  serialized_end=10190,
 )
 
 
@@ -3497,6 +3942,7 @@ _CMSGCLIENTTOGCADDPLAYERTOGUILDCHATRESPONSE = _descriptor.Descriptor(
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
+  create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
       name='result', full_name='dota.CMsgClientToGCAddPlayerToGuildChatResponse.result', index=0,
@@ -3504,7 +3950,7 @@ _CMSGCLIENTTOGCADDPLAYERTOGUILDCHATRESPONSE = _descriptor.Descriptor(
       has_default_value=True, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -3518,8 +3964,8 @@ _CMSGCLIENTTOGCADDPLAYERTOGUILDCHATRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=9850,
-  serialized_end=10156,
+  serialized_start=10193,
+  serialized_end=10499,
 )
 
 
@@ -3529,6 +3975,7 @@ _CMSGFINDGUILDBYTAGRESPONSE = _descriptor.Descriptor(
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
+  create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
       name='result', full_name='dota.CMsgFindGuildByTagResponse.result', index=0,
@@ -3536,21 +3983,21 @@ _CMSGFINDGUILDBYTAGRESPONSE = _descriptor.Descriptor(
       has_default_value=True, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
       name='guild_id', full_name='dota.CMsgFindGuildByTagResponse.guild_id', index=1,
       number=2, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
       name='guild_summary', full_name='dota.CMsgFindGuildByTagResponse.guild_summary', index=2,
       number=3, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -3564,8 +4011,8 @@ _CMSGFINDGUILDBYTAGRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=10159,
-  serialized_end=10472,
+  serialized_start=10502,
+  serialized_end=10815,
 )
 
 
@@ -3575,6 +4022,7 @@ _CMSGSEARCHFOROPENGUILDSRESPONSE_SEARCHRESULT = _descriptor.Descriptor(
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
+  create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
       name='guild_id', full_name='dota.CMsgSearchForOpenGuildsResponse.SearchResult.guild_id', index=0,
@@ -3582,14 +4030,14 @@ _CMSGSEARCHFOROPENGUILDSRESPONSE_SEARCHRESULT = _descriptor.Descriptor(
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
       name='guild_summary', full_name='dota.CMsgSearchForOpenGuildsResponse.SearchResult.guild_summary', index=1,
       number=2, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -3602,8 +4050,8 @@ _CMSGSEARCHFOROPENGUILDSRESPONSE_SEARCHRESULT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=10669,
-  serialized_end=10748,
+  serialized_start=11035,
+  serialized_end=11114,
 )
 
 _CMSGSEARCHFOROPENGUILDSRESPONSE = _descriptor.Descriptor(
@@ -3612,6 +4060,7 @@ _CMSGSEARCHFOROPENGUILDSRESPONSE = _descriptor.Descriptor(
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
+  create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
       name='result', full_name='dota.CMsgSearchForOpenGuildsResponse.result', index=0,
@@ -3619,14 +4068,21 @@ _CMSGSEARCHFOROPENGUILDSRESPONSE = _descriptor.Descriptor(
       has_default_value=True, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
       name='search_results', full_name='dota.CMsgSearchForOpenGuildsResponse.search_results', index=1,
       number=2, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='use_whitelist', full_name='dota.CMsgSearchForOpenGuildsResponse.use_whitelist', index=2,
+      number=3, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -3640,8 +4096,8 @@ _CMSGSEARCHFOROPENGUILDSRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=10475,
-  serialized_end=10848,
+  serialized_start=10818,
+  serialized_end=11214,
 )
 
 
@@ -3651,6 +4107,7 @@ _CMSGCLIENTTOGCREPORTGUILDCONTENT = _descriptor.Descriptor(
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
+  create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
       name='guild_id', full_name='dota.CMsgClientToGCReportGuildContent.guild_id', index=0,
@@ -3658,14 +4115,14 @@ _CMSGCLIENTTOGCREPORTGUILDCONTENT = _descriptor.Descriptor(
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
       name='guild_content_flags', full_name='dota.CMsgClientToGCReportGuildContent.guild_content_flags', index=1,
       number=2, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -3679,8 +4136,8 @@ _CMSGCLIENTTOGCREPORTGUILDCONTENT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=10851,
-  serialized_end=11058,
+  serialized_start=11217,
+  serialized_end=11424,
 )
 
 
@@ -3690,6 +4147,7 @@ _CMSGCLIENTTOGCREPORTGUILDCONTENTRESPONSE = _descriptor.Descriptor(
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
+  create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
       name='result', full_name='dota.CMsgClientToGCReportGuildContentResponse.result', index=0,
@@ -3697,7 +4155,7 @@ _CMSGCLIENTTOGCREPORTGUILDCONTENTRESPONSE = _descriptor.Descriptor(
       has_default_value=True, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -3711,8 +4169,8 @@ _CMSGCLIENTTOGCREPORTGUILDCONTENTRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=11061,
-  serialized_end=11339,
+  serialized_start=11427,
+  serialized_end=11705,
 )
 
 
@@ -3722,6 +4180,7 @@ _CMSGCLIENTTOGCREQUESTACCOUNTGUILDPERSONAINFO = _descriptor.Descriptor(
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
+  create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
       name='account_id', full_name='dota.CMsgClientToGCRequestAccountGuildPersonaInfo.account_id', index=0,
@@ -3729,7 +4188,7 @@ _CMSGCLIENTTOGCREQUESTACCOUNTGUILDPERSONAINFO = _descriptor.Descriptor(
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -3742,8 +4201,8 @@ _CMSGCLIENTTOGCREQUESTACCOUNTGUILDPERSONAINFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=11341,
-  serialized_end=11407,
+  serialized_start=11707,
+  serialized_end=11773,
 )
 
 
@@ -3753,6 +4212,7 @@ _CMSGCLIENTTOGCREQUESTACCOUNTGUILDPERSONAINFORESPONSE = _descriptor.Descriptor(
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
+  create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
       name='result', full_name='dota.CMsgClientToGCRequestAccountGuildPersonaInfoResponse.result', index=0,
@@ -3760,14 +4220,14 @@ _CMSGCLIENTTOGCREQUESTACCOUNTGUILDPERSONAINFORESPONSE = _descriptor.Descriptor(
       has_default_value=True, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
       name='persona_info', full_name='dota.CMsgClientToGCRequestAccountGuildPersonaInfoResponse.persona_info', index=1,
       number=2, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -3781,8 +4241,8 @@ _CMSGCLIENTTOGCREQUESTACCOUNTGUILDPERSONAINFORESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=11410,
-  serialized_end=11749,
+  serialized_start=11776,
+  serialized_end=12115,
 )
 
 
@@ -3792,6 +4252,7 @@ _CMSGCLIENTTOGCREQUESTACCOUNTGUILDPERSONAINFOBATCH = _descriptor.Descriptor(
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
+  create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
       name='account_ids', full_name='dota.CMsgClientToGCRequestAccountGuildPersonaInfoBatch.account_ids', index=0,
@@ -3799,7 +4260,7 @@ _CMSGCLIENTTOGCREQUESTACCOUNTGUILDPERSONAINFOBATCH = _descriptor.Descriptor(
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -3812,8 +4273,8 @@ _CMSGCLIENTTOGCREQUESTACCOUNTGUILDPERSONAINFOBATCH = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=11751,
-  serialized_end=11823,
+  serialized_start=12117,
+  serialized_end=12189,
 )
 
 
@@ -3823,6 +4284,7 @@ _CMSGCLIENTTOGCREQUESTACCOUNTGUILDPERSONAINFOBATCHRESPONSE = _descriptor.Descrip
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
+  create_key=_descriptor._internal_create_key,
   fields=[
     _descriptor.FieldDescriptor(
       name='result', full_name='dota.CMsgClientToGCRequestAccountGuildPersonaInfoBatchResponse.result', index=0,
@@ -3830,14 +4292,14 @@ _CMSGCLIENTTOGCREQUESTACCOUNTGUILDPERSONAINFOBATCHRESPONSE = _descriptor.Descrip
       has_default_value=True, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
       name='persona_infos', full_name='dota.CMsgClientToGCRequestAccountGuildPersonaInfoBatchResponse.persona_infos', index=1,
       number=2, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -3851,8 +4313,8 @@ _CMSGCLIENTTOGCREQUESTACCOUNTGUILDPERSONAINFOBATCHRESPONSE = _descriptor.Descrip
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=11826,
-  serialized_end=12176,
+  serialized_start=12192,
+  serialized_end=12542,
 )
 
 _CMSGGUILDSUMMARY_EVENTPOINTS.containing_type = _CMSGGUILDSUMMARY
@@ -3876,6 +4338,7 @@ _CMSGCLIENTTOGCREQUESTGUILDDATARESPONSE.fields_by_name['result'].enum_type = _CM
 _CMSGCLIENTTOGCREQUESTGUILDDATARESPONSE.fields_by_name['guild_data'].message_type = _CMSGGUILDDATA
 _CMSGCLIENTTOGCREQUESTGUILDDATARESPONSE_ERESPONSE.containing_type = _CMSGCLIENTTOGCREQUESTGUILDDATARESPONSE
 _CMSGGCTOCLIENTGUILDDATAUPDATED.fields_by_name['guild_data'].message_type = _CMSGGUILDDATA
+_CMSGGCTOCLIENTGUILDMEMBERSDATAUPDATED.fields_by_name['members_data'].message_type = _CMSGGUILDMEMBER
 _CMSGCLIENTTOGCREQUESTGUILDMEMBERSHIPRESPONSE.fields_by_name['result'].enum_type = _CMSGCLIENTTOGCREQUESTGUILDMEMBERSHIPRESPONSE_ERESPONSE
 _CMSGCLIENTTOGCREQUESTGUILDMEMBERSHIPRESPONSE.fields_by_name['guild_memberships'].message_type = _CMSGACCOUNTGUILDMEMBERSHIPS
 _CMSGCLIENTTOGCREQUESTGUILDMEMBERSHIPRESPONSE_ERESPONSE.containing_type = _CMSGCLIENTTOGCREQUESTGUILDMEMBERSHIPRESPONSE
@@ -3947,6 +4410,7 @@ DESCRIPTOR.message_types_by_name['CMsgClientToGCSetGuildInfoResponse'] = _CMSGCL
 DESCRIPTOR.message_types_by_name['CMsgClientToGCRequestGuildData'] = _CMSGCLIENTTOGCREQUESTGUILDDATA
 DESCRIPTOR.message_types_by_name['CMsgClientToGCRequestGuildDataResponse'] = _CMSGCLIENTTOGCREQUESTGUILDDATARESPONSE
 DESCRIPTOR.message_types_by_name['CMsgGCToClientGuildDataUpdated'] = _CMSGGCTOCLIENTGUILDDATAUPDATED
+DESCRIPTOR.message_types_by_name['CMsgGCToClientGuildMembersDataUpdated'] = _CMSGGCTOCLIENTGUILDMEMBERSDATAUPDATED
 DESCRIPTOR.message_types_by_name['CMsgClientToGCRequestGuildMembership'] = _CMSGCLIENTTOGCREQUESTGUILDMEMBERSHIP
 DESCRIPTOR.message_types_by_name['CMsgClientToGCRequestGuildMembershipResponse'] = _CMSGCLIENTTOGCREQUESTGUILDMEMBERSHIPRESPONSE
 DESCRIPTOR.message_types_by_name['CMsgGCToClientGuildMembershipUpdated'] = _CMSGGCTOCLIENTGUILDMEMBERSHIPUPDATED
@@ -4126,6 +4590,13 @@ CMsgGCToClientGuildDataUpdated = _reflection.GeneratedProtocolMessageType('CMsgG
   # @@protoc_insertion_point(class_scope:dota.CMsgGCToClientGuildDataUpdated)
   })
 _sym_db.RegisterMessage(CMsgGCToClientGuildDataUpdated)
+
+CMsgGCToClientGuildMembersDataUpdated = _reflection.GeneratedProtocolMessageType('CMsgGCToClientGuildMembersDataUpdated', (_message.Message,), {
+  'DESCRIPTOR' : _CMSGGCTOCLIENTGUILDMEMBERSDATAUPDATED,
+  '__module__' : 'dota_gcmessages_client_guild_pb2'
+  # @@protoc_insertion_point(class_scope:dota.CMsgGCToClientGuildMembersDataUpdated)
+  })
+_sym_db.RegisterMessage(CMsgGCToClientGuildMembersDataUpdated)
 
 CMsgClientToGCRequestGuildMembership = _reflection.GeneratedProtocolMessageType('CMsgClientToGCRequestGuildMembership', (_message.Message,), {
   'DESCRIPTOR' : _CMSGCLIENTTOGCREQUESTGUILDMEMBERSHIP,

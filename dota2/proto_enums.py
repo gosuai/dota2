@@ -227,14 +227,6 @@ class DOTA_GC_TEAM(IntEnum):
     PLAYER_POOL = 4
     NOTEAM = 5
 
-class DOTA_LobbyMemberXPBonus(IntEnum):
-    DEFAULT = 0
-    BATTLE_BOOSTER = 1
-    SHARE_BONUS = 2
-    PARTY = 3
-    RECRUITMENT = 4
-    PCBANG = 5
-
 class DOTA_TournamentEvents(IntEnum):
     TE_FIRST_BLOOD = 0
     TE_GAME_END = 1
@@ -859,7 +851,6 @@ class EDOTAGCMsg(IntEnum):
     EMsgClientToGCRecycleHeroRelic = 7619
     EMsgClientToGCRecycleHeroRelicResponse = 7620
     EMsgGCToGCRevokeEventOwnership = 7621
-    EMsgGCToGCUnlockEventPointSpending = 7622
     EMsgGCToClientRequestLaneSelection = 7623
     EMsgGCToClientRequestLaneSelectionResponse = 7624
     EMsgServerToGCCavernCrawlIsHeroActive = 7625
@@ -910,6 +901,7 @@ class EDOTAGCMsg(IntEnum):
     EMsgGCToClientPartySearchInvites = 7680
     EMsgGCToClientRequestMMInfo = 7681
     EMsgClientToGCMMInfo = 7682
+    EMsgSignOutTextMuteInfo = 7683
     EMsgGCDev_GrantWarKill = 8001
     EMsgServerToGCLockCharmTrading = 8004
     EMsgClientToGCPlayerStatsRequest = 8006
@@ -929,10 +921,6 @@ class EDOTAGCMsg(IntEnum):
     EMsgClientToGCFriendsPlayedCustomGameRequest = 8020
     EMsgGCToClientFriendsPlayedCustomGameResponse = 8021
     EMsgGCTopCustomGamesList = 8024
-    EMsgClientToGCSocialMatchPostCommentRequest = 8025
-    EMsgGCToClientSocialMatchPostCommentResponse = 8026
-    EMsgClientToGCSocialMatchDetailsRequest = 8027
-    EMsgGCToClientSocialMatchDetailsResponse = 8028
     EMsgClientToGCSetPartyOpen = 8029
     EMsgClientToGCMergePartyInvite = 8030
     EMsgGCToClientMergeGroupInviteReply = 8031
@@ -1238,6 +1226,8 @@ class EDOTAGCMsg(IntEnum):
     EMsgClientToGCSubmitPlayerMatchSurveyResponse = 8362
     EMsgSQLGCToGCGrantAllHeroProgressAccount = 8363
     EMsgSQLGCToGCGrantAllHeroProgressVictory = 8364
+    EMsgDevDeleteEventActions = 8365
+    EMsgDevDeleteEventActionsResponse = 8366
     eMsgGCToGCGetAllHeroCurrent = 8635
     eMsgGCToGCGetAllHeroCurrentResponse = 8636
     EMsgGCSubmitPlayerAvoidRequest = 8637
@@ -1321,8 +1311,6 @@ class EDOTAGCMsg(IntEnum):
     EMsgSignOutGuildChallengeProgress = 8720
     EMsgClientToGCRequestGuildEventMembers = 8721
     EMsgClientToGCRequestGuildEventMembersResponse = 8722
-    EMsgServerToGCRefreshGuildContract = 8723
-    EMsgServerToGCRefreshGuildContractResponse = 8724
     EMsgClientToGCReportGuildContent = 8725
     EMsgClientToGCReportGuildContentResponse = 8726
     EMsgClientToGCRequestAccountGuildPersonaInfo = 8727
@@ -1336,6 +1324,40 @@ class EDOTAGCMsg(IntEnum):
     EMsgClientToGCSubmitDraftTriviaMatchAnswer = 8736
     EMsgClientToGCSubmitDraftTriviaMatchAnswerResponse = 8737
     EMsgGCToGCSignoutSpendBounty = 8738
+    EMsgClientToGCApplyGauntletTicket = 8739
+    EMsgClientToGCUnderDraftRollBackBench = 8740
+    EMsgClientToGCUnderDraftRollBackBenchResponse = 8741
+    EMsgGCToGCGetEventActionScore = 8742
+    EMsgGCToGCGetEventActionScoreResponse = 8743
+    EMsgServerToGCGetGuildContracts = 8744
+    EMsgServerToGCGetGuildContractsResponse = 8745
+    EMsgLobbyEventGameData = 8746
+    EMsgGCToClientGuildMembersDataUpdated = 8747
+    EMsgSignOutReportActivityMarkers = 8748
+    EMsgSignOutDiretideCandy = 8749
+    EMsgGCToClientPostGameItemAwardNotification = 8750
+    EMsgClientToGCGetOWMatchDetails = 8751
+    EMsgClientToGCGetOWMatchDetailsResponse = 8752
+    EMsgClientToGCSubmitOWConviction = 8753
+    EMsgClientToGCSubmitOWConvictionResponse = 8754
+    EMsgGCToGCGetAccountSteamChina = 8755
+    EMsgGCToGCGetAccountSteamChinaResponse = 8756
+    EMsgClientToGCClaimLeaderboardRewards = 8757
+    EMsgClientToGCClaimLeaderboardRewardsResponse = 8758
+    EMsgClientToGCRecalibrateMMR = 8759
+    EMsgClientToGCRecalibrateMMRResponse = 8760
+    EMsgGCToGCGrantEventPointActionList = 8761
+    EMsgClientToGCChinaSSAURLRequest = 8764
+    EMsgClientToGCChinaSSAURLResponse = 8765
+    EMsgClientToGCChinaSSAAcceptedRequest = 8766
+    EMsgClientToGCChinaSSAAcceptedResponse = 8767
+    EMsgSignOutOverwatchSuspicion = 8768
+    EMsgServerToGCGetSuspicionConfig = 8769
+    EMsgServerToGCGetSuspicionConfigResponse = 8770
+    EMsgGCToGCGrantPlusHeroChallengeMatchResults = 8771
+    EMsgGCToClientOverwatchCasesAvailable = 8772
+    EMsgServerToGCAccountCheck = 8773
+    EMsgSignOutPerfData = 8776
 
 class EDOTAGCSessionNeed(IntEnum):
     Unknown = 0
@@ -1458,7 +1480,8 @@ class EEvent(IntEnum):
     EVENT_ID_NEW_BLOOM_2020 = 28
     EVENT_ID_INTERNATIONAL_2020 = 29
     EVENT_ID_TEAM_FANDOM = 30
-    EVENT_ID_COUNT = 31
+    EVENT_ID_DIRETIDE_2020 = 31
+    EVENT_ID_COUNT = 32
 
 class EEventActionScoreMode(IntEnum):
     eEventActionScoreMode_Add = 0
@@ -1719,6 +1742,8 @@ class EGCItemMsg(IntEnum):
     EMsgGCToGCGetInfuxIntervalStats = 2606
     EMsgGCToGCGetInfuxIntervalStatsResponse = 2607
     EMsgGCToGCPurchaseSucceeded = 2608
+    EMsgClientToGCGetLimitedItemPurchaseQuantity = 2609
+    EMsgClientToGCGetLimitedItemPurchaseQuantityResponse = 2610
 
 class EGCMsgInitiateTradeResponse(IntEnum):
     Accepted = 0
@@ -1928,6 +1953,8 @@ class ELeagueTier(IntEnum):
     LEAGUE_TIER_MAJOR = 4
     LEAGUE_TIER_INTERNATIONAL = 5
     LEAGUE_TIER_DPC_QUALIFIER = 6
+    LEAGUE_TIER_DPC_LEAGUE_QUALIFIER = 7
+    LEAGUE_TIER_DPC_LEAGUE = 8
 
 class ELeagueTierCategory(IntEnum):
     LEAGUE_TIER_CATEGORY_AMATEUR = 1
@@ -1960,6 +1987,21 @@ class EMobilePaymentProvider(IntEnum):
     Invalid = 0
     GooglePlay = 1
     AppleAppStore = 2
+
+EOverwatchConviction = IntEnum('EOverwatchConviction', {
+    'None': 0,
+    'NotGuilty': 1,
+    'GuiltUnclear': 2,
+    'Guilty': 3,
+    })
+
+class EOverwatchReportReason(IntEnum):
+    Unknown = 0
+    Cheating = 1
+    Feeding = 2
+    Griefing = 3
+    Suspicious = 4
+    AbilityAbuse = 5
 
 class EPartyBeaconType(IntEnum):
     Available = 0
@@ -2055,6 +2097,9 @@ class EStartFindingMatchResult(IntEnum):
     NoQueuePoints = 127
     MemberMissingGauntletFlag = 128
     MemberGauntletTooRecent = 129
+    DifficultyNotUnlocked = 130
+    CoachesNotAllowedInParty = 131
+    MatchmakingBusy = 132
 
 class ESupportEventRequestResult(IntEnum):
     Success = 0
@@ -2200,6 +2245,7 @@ class EUnderDraftResponse(IntEnum):
     eHasBigReward = 8
     eNoGCConnection = 9
     eTooBusy = 10
+    eCantRollBack = 11
 
 EWeekendTourneyRichPresenceEvent = IntEnum('EWeekendTourneyRichPresenceEvent', {
     'None': 0,
@@ -2260,6 +2306,7 @@ class LobbyDotaTVDelay(IntEnum):
     LobbyDotaTV_10 = 0
     LobbyDotaTV_120 = 1
     LobbyDotaTV_300 = 2
+    LobbyDotaTV_900 = 3
 
 class MatchLanguages(IntEnum):
     MATCH_LANGUAGE_INVALID = 0
@@ -2300,7 +2347,6 @@ __all__ = [
     'DOTA_GameMode',
     'DOTA_GameState',
     'DOTA_GC_TEAM',
-    'DOTA_LobbyMemberXPBonus',
     'DOTA_TournamentEvents',
     'DOTA_WatchReplayType',
     'DOTABotDifficulty',
@@ -2364,6 +2410,8 @@ __all__ = [
     'EMatchGroupServerStatus',
     'EMatchOutcome',
     'EMobilePaymentProvider',
+    'EOverwatchConviction',
+    'EOverwatchReportReason',
     'EPartyBeaconType',
     'EPartyMatchmakingFlags',
     'EPlayerCoachMatchFlag',
