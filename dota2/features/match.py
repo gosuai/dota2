@@ -51,7 +51,7 @@ class Match(object):
                               })
 
         def wrap_match_details(message):
-            if message.msg is EGCBaseClientMsg.EMsgGCToClientRequestDropped:
+            if getattr(message, 'msg', None) is EGCBaseClientMsg.EMsgGCToClientRequestDropped:
                 eresult = EResult.Fail
             else:
                 eresult = EResult(message.result)
